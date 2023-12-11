@@ -1,0 +1,346 @@
+[
+  {
+    "name": "nmstat",
+    "value": "0fb96337-6e34-38af-a4e6-941e6a376368",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1721006857,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga_KQEC5XMPWG",
+    "value": "GS1.1.1651695498.1.1.1651696483.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1714768483,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_4Y7VCV2H8N",
+    "value": "GS1.1.1653421658.1.0.1653421659.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1716493659,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_92C7MKS9J6",
+    "value": "GS1.1.1655418464.9.1.1655418504.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1718490504,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_5YG80N2KH6",
+    "value": "GS1.1.1655448026.1.1.1655448052.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1718520052,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_W705VCEJ2R",
+    "value": "GS1.1.1660177797.1.1.1660177896.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1723249896,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__utmz",
+    "value": "266566684.1666176730.2.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)",
+    "domain": ".cape.ucsd.edu",
+    "path": "/",
+    "expires": 1702576796,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_5WJ9MFXDQJ",
+    "value": "GS1.1.1673924878.2.1.1673925508.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1708485508.356014,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_38SGKHLHG7",
+    "value": "GS1.1.1674498883.1.0.1674498887.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1709058887.460133,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_SS9JX0BSKC",
+    "value": "GS1.1.1678143106.2.0.1678143110.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1712703110.923421,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_W6ZQY5JX0S",
+    "value": "GS1.1.1683511392.1.1.1683511414.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1718071414.609952,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_09PDMVD2EC",
+    "value": "GS1.1.1684371946.1.0.1684371949.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1718931949.245382,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_J9RQT20PCM",
+    "value": "GS1.1.1684371946.1.0.1684371949.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1718931949.395016,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_R9CX17FF3G",
+    "value": "GS1.1.1684371949.1.1.1684371985.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1718931985.599494,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_8BP9YL1JLD",
+    "value": "GS1.1.1684807922.2.1.1684808006.60.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1719368006.807543,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_XC4E9456C8",
+    "value": "GS1.1.1685719393.5.0.1685719402.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1720279402.06224,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__utma",
+    "value": "266566684.21443813.1629853754.1686707369.1686808797.47",
+    "domain": ".cape.ucsd.edu",
+    "path": "/",
+    "expires": 1721368796.785139,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_LFF0ZPYD54",
+    "value": "GS1.1.1686808796.45.0.1686808800.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1721368800.12917,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_SG539BE5N7",
+    "value": "GS1.1.1692211252.1.1.1692211491.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1726771491.067645,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_W0E4M9XH8B",
+    "value": "GS1.1.1698186157.61.1.1698186274.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1732746274.087065,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_ZWZDLH05C7",
+    "value": "GS1.1.1699462701.57.1.1699462894.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1734022894.466595,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.3.21443813.1629853754",
+    "domain": ".cape.ucsd.edu",
+    "path": "/",
+    "expires": 1736706981.932767,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.682683100.1700012980",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1707788980,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_DQLWSKCKE6",
+    "value": "GS1.1.1700012974.1.1.1700013700.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1734573701.012491,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_PWJGRGMV0T",
+    "value": "GS1.1.1700012980.1.1.1700013701.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1734573701.028754,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_hjSessionUser_3662797",
+    "value": "eyJpZCI6ImY3MmM2YjkyLTM1OWUtNTMwZC1iNDU5LTIwYTUyMDk1OTU4MiIsImNyZWF0ZWQiOjE3MDEyOTYyMDk5MzgsImV4aXN0aW5nIjpmYWxzZX0=",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1732832209,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_ga_ZBPHLZYTS4",
+    "value": "GS1.1.1701296209.2.0.1701296211.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1735856211.096748,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_1H1H4J36MR",
+    "value": "GS1.1.1701296863.22.1.1701296900.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1735856900.49103,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_hp2_id.3001039959",
+    "value": "%7B%22userId%22%3A%22663196532573559%22%2C%22pageviewId%22%3A%223500928359761283%22%2C%22sessionId%22%3A%225417949193957679%22%2C%22identity%22%3A%22uu-2-84a723bb328e1b85be2a677e1db3579f5e6dfd6b460717954874e775557dea39-YYzs3up2ikmNIyNSel3biohOBqVtaOJCALBEKdzq%22%2C%22trackerVersion%22%3A%224.0%22%2C%22identityField%22%3Anull%2C%22isIdentified%22%3A1%7D",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1735565113,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "optimizelyEndUserId",
+    "value": "oeu1701547572132r0.7282888663059166",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1717099572,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.21443813.1629853754",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1736143167.094343,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga_LKBQFBRWYL",
+    "value": "GS1.1.1701582894.2.1.1701583666.0.0.0",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1736143667.018548,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__utma",
+    "value": "57960238.21443813.1629853754.1701397763.1702084984.309",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1736644998.38563,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "__utmz",
+    "value": "57960238.1702084984.309.304.utmcsr=a5.ucsd.edu|utmccn=(referral)|utmcmd=referral|utmcct=/",
+    "domain": ".ucsd.edu",
+    "path": "/",
+    "expires": 1717852998,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_shibsession_64656661756c7468747470733a2f2f666163756c74796571756974792e756373642e6564752f73686962626f6c6574682d7370",
+    "value": "_93c9ee1c4c3d9cdfea6d53617e69285c",
+    "domain": "cape.ucsd.edu",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "_saml_idp",
+    "value": "dXJuOm1hY2U6aW5jb21tb246dWNzZC5lZHU%3D",
+    "domain": "cape.ucsd.edu",
+    "path": "/",
+    "expires": 1702751605.491129,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "ASP.NET_SessionId",
+    "value": "euelob4lvgigdby2v3rv1v2y",
+    "domain": "cape.ucsd.edu",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga_LFF0ZPYD54",
+    "value": "GS1.3.1702146162.49.1.1702146984.0.0.0",
+    "domain": ".cape.ucsd.edu",
+    "path": "/",
+    "expires": 1736706984.319659,
+    "httpOnly": false,
+    "secure": false
+  }
+]
