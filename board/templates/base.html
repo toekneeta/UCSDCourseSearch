@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="script.js" defer></script> -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- search icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- filter icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>UCSD Course Search </title>
+</head>
+<body>
+    <div class="website-title">
+        UCSD Course Search
+    </div>
+    <br>
+    <div class="search-bar">
+        <input type="text" placeholder="Search" id="search-input">
+        <button onclick="sendSearch()" id="search-button">
+            <span class="material-symbols-outlined">
+                search
+                </span>
+        </button>
+    </div>
+    <div class="dropdown">
+        <button onclick="toggleDropdown()">
+            <span class="material-symbols-outlined">
+                filter_list
+            </span> 
+        </button>
+        <div id="dropdownContent" class="dropdown-content">
+            <input type="checkbox" id="option1" name="option1" value="Option1" checked>
+            <label for="option1">Lower Division</label><br>
+            <input type="checkbox" id="option2" name="option2" value="Option2" checked>
+            <label for="option2">Upper Division</label><br>
+            <input type="checkbox" id="option3" name="option3" value="Option3" checked>
+            <label for="option3">Undergraduate</label><br>
+            <input type="checkbox" id="option4" name="option4" value="Option4" checked>
+            <label for="option4">Graduate</label><br>
+
+            <div class="text-boxes-container">
+                <div class="text-box">
+                    <label for="departmentsInclude">Departments that must be Included:</label>
+                    <textarea id="departmentsInclude" name="departmentsInclude"></textarea>
+                </div>
+                <div class="text-box">
+                    <label for="departmentsExclude">Departments to Exclude:</label>
+                    <textarea id="departmentsExclude" name="departmentsExclude"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="results"></div>
+  
+    
+</body>
+</html>

@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
+.website-title{
+    font-size: 60px;
+    text-align: center;
+    padding-top:10%;
+    color: rgba(237, 246, 249);
+}
+
+body {
+    font-family: Raleway;
+    margin: center;
+    background-color:rgba(28, 82, 83);
+}
+
+.search-bar {
+    max-width: 640px;
+    background: #f0f0f0;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin:auto;
+}
+
+#search-input {
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    width: 100%;
+    font-size: 16px;
+}
+
+#search-button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.material-icons {
+    color: #007bff;
+    font-size: 24px; /* You can adjust the size if needed */
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: auto;
+    max-width: 640px;
+}
+
+.dropdown button {
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.checkbox-item {
+    display: flex; /* This makes the checkbox and label align in a row */
+    align-items: center; /* This vertically centers the checkbox and label */
+    padding: 5px; /* Add some padding for spacing */
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px; /* Add some space between the checkbox and the label */
+}
+
+/* Existing styles here */
+
+.text-boxes-container {
+    display: flex; /* Align the text boxes side by side */
+    justify-content: space-between; /* Space out the text boxes */
+    padding: 10px; /* Add some padding inside the container */
+}
+
+.text-box {
+    flex: 1; /* Distribute space evenly */
+    margin-right: 20px; /* Add some space between the text boxes */
+
+}
+
+.text-box:last-child {
+    margin-right: 10px; /* Remove margin for the last text box */
+}
+
+.text-box label {
+    display: block; /* Ensure the label is above the text box */
+    margin-bottom: 5px; /* Space between label and text box */
+}
+
+.text-box input[type="text"] {
+    width: 100%; /* Make the text box fill its container */
+}
+
+.text-box textarea {
+    width: 100%; /* Make the textarea fill its container */
+    height: auto; /* Auto height based on content */
+    min-height: 60px; /* Minimum height equivalent to approximately 3 lines of text */
+    padding: 5px; /* Add some padding inside the textarea */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Base dropdown styles */
+.dropdown {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: 10px auto; /* Add margin for spacing */
+    border-radius: 10px; /* Round the corners */
+}
+
+.dropdown button {
+    background-color: #f2f2f2; /* Soft background color */
+    background-color:rgba(131, 197, 190);
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Round the corners */
+    padding: 5px; /* Add padding */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.dropdown button:hover {
+    background-color: #e8e8e8; /* Slightly darker on hover */
+    background-color:rgba(101, 167, 160);
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    left: 0;
+    right: 0;
+    background-color:rgba(131, 197, 190);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Soft shadow */
+    z-index: 1;
+    border-radius: 10px; /* Round the corners */
+    padding: 15px; /* Add padding */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Styles for text boxes and checkboxes */
+.text-box, .checkbox-item {
+    margin-bottom: 10px;
+}
+
+.text-box textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 5px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Slightly round corners */
+    resize: vertical;
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+.text-box textarea:focus {
+    border-color: #aaa; /* Change border color on focus */
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-item label {
+    line-height: 1.5; /* Improve line height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-boxes-container {
+        flex-direction: column;
+    }
+}
+
+#results{
+    width: 80%;
+    margin: auto;
+}
+
+.result-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.class-code {
+    font-weight: bold;
+    color: rgba(238, 108, 77);
+}
+
+.class-title {
+    color: rgba(243, 141, 104);
+    margin-left: 5px;
+}
+
+.class-description {
+    /* margin-top: 10px; */
+    color: rgba(237, 246, 249);
+}
+
+
+/* Credits
+
+Search engine design - ChatGPT (prompted with image)
+
+*/
