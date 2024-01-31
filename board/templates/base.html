@@ -7,10 +7,16 @@
     <script src="{{ url_for('static', filename='script.js') }}" defer></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <!-- <link rel="stylesheet" href="styles.css"> -->
+   
     <!-- search icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- filter icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- thumbs icon-->>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
     <title>UCSD Course Search </title>
 </head>
 <body>
@@ -33,23 +39,39 @@
             </span> 
         </button>
         <div id="dropdownContent" class="dropdown-content">
-            <input type="checkbox" id="option1" name="option1" value="Option1" checked>
-            <label for="option1">Lower Division</label><br>
-            <input type="checkbox" id="option2" name="option2" value="Option2" checked>
-            <label for="option2">Upper Division</label><br>
-            <input type="checkbox" id="option3" name="option3" value="Option3" checked>
-            <label for="option3">Undergraduate</label><br>
-            <input type="checkbox" id="option4" name="option4" value="Option4" checked>
-            <label for="option4">Graduate</label><br>
-
+            <div id="checkboxesContent"> 
+                <input type="checkbox" id="lower-div-checkbox" name="lower-div-checkbox" value="Option1" checked>
+                <label for="lower-div-checkbox">Lower Division</label><br>
+            
+                <input type="checkbox" id="upper-div-checkbox" name="upper-div-checkbox" value="Option2" checked>
+                <label for="upper-div-checkbox">Upper Division</label><br>
+            
+                <!-- <input type="checkbox" id="undergraduate-checkbox" name="undergraduate-checkbox" value="Option3" checked>
+                <label for="undergraduate-checkbox">Undergraduate</label><br> -->
+            
+                <input type="checkbox" id="graduate-checkbox" name="graduate-checkbox" value="Option4" checked>
+                <label for="graduate-checkbox">Graduate</label><br>
+            </div>
+            
+            <div class="results-number-container">
+                <label for="results-number-select">Number of Results:</label>
+                <div id="results-number-select" class="button-group">
+                    <button class="number-button" value="5">5</button>
+                    <button class="number-button selected" value="10">10</button>
+                    <button class="number-button" value="15">15</button>
+                    <button class="number-button" value="20">20</button>
+                </div>
+            </div>
+            
+    
             <div class="text-boxes-container">
                 <div class="text-box">
                     <label for="departmentsInclude">Departments that must be Included:</label>
-                    <textarea id="departmentsInclude" name="departmentsInclude"></textarea>
+                    <textarea id="departmentsInclude" name="departmentsInclude" placeholder="Separate departments with commas"></textarea>
                 </div>
                 <div class="text-box">
                     <label for="departmentsExclude">Departments to Exclude:</label>
-                    <textarea id="departmentsExclude" name="departmentsExclude"></textarea>
+                    <textarea id="departmentsExclude" name="departmentsExclude"placeholder="Separate departments with commas"></textarea>
                 </div>
             </div>
         </div>

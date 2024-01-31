@@ -3,20 +3,20 @@ import numpy as np
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
-course_info = pd.read_csv('data/course_catalog.csv')
-course_info = course_info.drop(course_info.columns[0], axis=1)
-course_info = course_info.astype(str)
+course_info = pd.read_csv('data/cleaned_course_catalog.csv')
 course_info = course_info.drop_duplicates()
 
 es = Elasticsearch("http://localhost:9200")
 mappings = {
     "properties": {
         'Code': {"type": "text"}, 
-        'Department': {"type": "text"}, 
+        'Department': {"type": "keyword"}, 
         'Title': {"type": "text"}, 
         'Units': {"type": "text"}, 
         'Description': {"type": "text"}, 
         'Prerequisites': {"type": "text"}, 
+        'Level': {"type": "keyword"}, 
+        'URL': {"type": "text"}, 
     }
 }
 try:
@@ -36,46 +36,69 @@ for i, row in course_info.iterrows():
                 'Title': row['Title'], 
                 'Units': row['Units'], 
                 'Description': row['Description'], 
-                'Prerequisites': row['Prerequisites']
+                'Prerequisites': row['Prerequisites'],
+                'Level':row['Level'],
+                'URL':row['URL'],
             }
         }
     )
 
 bulk(es, bulk_data)
 
-def es_search(query, k=10):
-    """
-    Searches the data using ElasticSearch to find the k most similar documents to the query.
-    Returns a list of the k most similar functions, along with their GitHub URLs and their similarity scores to the query
-    """
+def es_search(query, upperdiv=True, lowerdiv=True, graduate=True, include='', exclude='', k=10):
+    # Build the query
+    must_clauses = [{
+        "query_string": {
+            "query": query,
+            "fields": [
+                'Code',
+                'Department',
+                'Title',
+                'Description',
+                'Prerequisites',
+                'Level'
+            ],
+            "phrase_slop": 2
+        }
+    }]
 
+    # Process include and exclude lists
+    include_list = include.upper().replace(" ", "").split(',')
+    exclude_list = exclude.upper().replace(" ", "").split(',')
+
+    # Add department filters
+    if include_list != ['']:
+        must_clauses.append({"terms": {"Department": include_list}})
+    
+    must_not_clause = {"terms": {"Department": exclude_list}} if exclude_list != [''] else []
+
+    # Initialize the 'should' clause for class level filters
+    should_clauses = []
+    if upperdiv:
+        should_clauses.append({"match": {"Level": "Upper Division"}})
+    if lowerdiv:
+        should_clauses.append({"match": {"Level": "Lower Division"}})
+    if graduate:
+        should_clauses.append({"match": {"Level": "Graduate"}})
+
+    # Build the final query
     es_query = {
         "query": {
             "bool": {
-                "must": {
-                    "query_string": {
-                        "query": query,
-                        "fields": [
-                            'Code',
-                            'Department',
-                            'Title^1.5',
-                            'Description^2', #boost 2x
-                            'Prerequisites'
-                        ],
-                        "phrase_slop": 2  # still considered a match if they are up to two terms apart
-                    }
-                },
+                "must": must_clauses,
+                "should": should_clauses,
+                "must_not": must_not_clause,
+                "minimum_should_match": 1 if should_clauses else 0
             }
         },
         "size": k
     }
-    
+
     response = es.search(index="courses", body=es_query)
     
     results = []
-    # for each result, add the function name, the GitHub URL of the function, and the similarity score to the results list
     for hit in response['hits']['hits']:
         row = hit['_source']
-        results.append((row['Code'], row['Title'], row['Description']))
+        results.append((row['Code'], row['Title'], row['Description'], row['Prerequisites']))
         
     return results
