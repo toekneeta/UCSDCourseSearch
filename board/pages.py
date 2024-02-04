@@ -1,17 +1,13 @@
 from flask import Blueprint, render_template, request, jsonify
-from board import course_search
+from board import embedding_search
+import pandas as pd
 
 bp = Blueprint("pages", __name__)
+df = pd.read_pickle("data/course_catalog_with_embeddings.pkl")
 
 @bp.route("/")
 def home():
     return render_template("pages/home.html")
-
-# @bp.route('/search', methods=['POST'])
-# def search():
-#     query = request.json.get('query')
-#     results = course_search.es_search(query)
-#     return jsonify(results)
 
 @bp.route('/search', methods=['POST'])
 def search():
@@ -24,7 +20,9 @@ def search():
     exclude = data.get('exclude')
     k = data.get('k')
 
-    # Now, perform your Elasticsearch query with additional filter parameters
-    results = course_search.es_search(query, upper_div, lower_div, graduate, include, exclude, k)
+    # performing search
+    data = embedding_search.filter(df, upper_div, lower_div, graduate, include, exclude)
+    results = embedding_search.emb_search(query, k, data)
+    # results = course_search.es_search(query, upper_div, lower_div, graduate, include, exclude, k)
 
     return jsonify(results)
