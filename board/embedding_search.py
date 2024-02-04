@@ -62,6 +62,7 @@ def emb_search(query, k, df):
     Top k most similar items
     """
     model = SentenceTransformer('sentence-transformers/msmarco-distilbert-base-v4')
+    k = int(k)
 
     # Encode the query to get the query embedding
     query_emb = model.encode(query)  # Assuming the model has an 'encode' method
@@ -79,6 +80,6 @@ def emb_search(query, k, df):
     top_k_indices = np.argsort(combined_similarities)[-k:][::-1]
 
     # Return the top k most similar items from df
-    top_k_results = df.iloc[top_k_indices][['Code', 'Department', 'Title', 'Description', 'Prerequisites', 'URL']]
+    top_k_results = df.iloc[top_k_indices][['Code','Title', 'Description', 'Prerequisites', 'URL']]
 
-    return top_k_results.to_numpy()
+    return top_k_results.values.tolist()

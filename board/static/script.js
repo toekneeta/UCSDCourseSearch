@@ -87,6 +87,7 @@ function sendSearch() {
     })
     .then(response => response.json())
     .then(data => {
+        console.log(2)
         display(data); // Call the display function with the filtered data
     })
     .catch((error) => {
@@ -96,6 +97,9 @@ function sendSearch() {
 
 function display(data) {
     var resultsDiv = document.getElementById('results');
+    console.log(1)
+    console.log(data)
+
     resultsDiv.innerHTML = '';
 
     resultsDiv.innerHTML += `
