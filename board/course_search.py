@@ -3,7 +3,7 @@ import numpy as np
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
-course_info = pd.read_csv('data/cleaned_course_catalog.csv')
+course_info = pd.read_csv('data/course_catalog.csv')
 course_info = course_info.drop_duplicates()
 
 es = Elasticsearch("http://localhost:9200")
