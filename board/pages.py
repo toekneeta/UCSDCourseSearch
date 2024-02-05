@@ -3,7 +3,6 @@ from flask import Blueprint, render_template, request, jsonify
 from board import flag_search
 import pandas as pd
 import numpy as np
-import json
 
 bp = Blueprint("pages", __name__)
 df = pd.read_pickle("data/course_catalog_with_flag_embeddings.pkl")
