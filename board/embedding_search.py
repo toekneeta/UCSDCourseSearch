@@ -40,16 +40,16 @@ def filter(df, upper_div, lower_div, graduate, include, exclude):
     
     return df
 
-def cos_sim(q_tensor, tensor_dict):
-    scores = {}
-    for id, tensor in tensor_dict.items():
-        magnitude_A = q_tensor.norm()
-        magnitude_B = tensor.norm()
-        similarity = torch.dot(q_tensor.squeeze(), tensor) / (magnitude_A * magnitude_B)
-        # only output scores that are high enough
-        if similarity >= 0.2:
-            scores[id] = similarity.item()
-    return scores
+# def cos_sim(q_tensor, tensor_dict):
+#     scores = {}
+#     for id, tensor in tensor_dict.items():
+#         magnitude_A = q_tensor.norm()
+#         magnitude_B = tensor.norm()
+#         similarity = torch.dot(q_tensor.squeeze(), tensor) / (magnitude_A * magnitude_B)
+#         # only output scores that are high enough
+#         if similarity >= 0.2:
+#             scores[id] = similarity.item()
+#     return scores
 
 def emb_search(query, k, df):
     """

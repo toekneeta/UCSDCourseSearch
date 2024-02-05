@@ -1,9 +1,12 @@
 from flask import Blueprint, render_template, request, jsonify
-from board import embedding_search
+# from board import embedding_search
+from board import flag_search
 import pandas as pd
+import numpy as np
+import json
 
 bp = Blueprint("pages", __name__)
-df = pd.read_pickle("data/course_catalog_with_embeddings.pkl")
+df = pd.read_pickle("data/course_catalog_with_flag_embeddings.pkl")
 
 @bp.route("/")
 def home():
@@ -21,8 +24,9 @@ def search():
     k = data.get('k')
 
     # performing search
-    data = embedding_search.filter(df, upper_div, lower_div, graduate, include, exclude)
-    results = embedding_search.emb_search(query, k, data)
+    data = flag_search.filter(df, upper_div, lower_div, graduate, include, exclude)
+    # results = embedding_search.emb_search(query, k, data)
+    results = flag_search.search(query, data, k)
     # results = course_search.es_search(query, upper_div, lower_div, graduate, include, exclude, k)
 
     return jsonify(results)
