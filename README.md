@@ -58,18 +58,11 @@ Execute the following commands to build and publish the Docker image:
 Create an Azure Container Registry to store your Docker images:
 
 ```sh
-az acr create --name ucsdcoursesearch --resource-group ucsdcoursesearch_group --sku standard --admin-enabled true
-```
-
-#### Building a Docker Image in Azure Container Registry
-Build your Docker image directly into the Azure container registry:
-
-```sh
-az acr build --file Dockerfile --registry ucsdcoursesearch --image ucsdcoursesearch-image
+az acr create --name ucsdcoursesearch --resource-group ucs-resource-group --sku standard --admin-enabled true
 ```
 
 #### Deploying the Web Application
-To deploy the web application on Azure, use the following command:
+To deploy the web application on Azure with a Docker image, use the following command:
 
 ```sh
 az container create --resource-group ucs-resource-group --name min-ucs-app-instance --image mfrankne/ucsdcoursesearch:latest --cpu 2 --memory 3 --dns-name-label ucsd-course-search --ports 8000
@@ -80,13 +73,13 @@ The website will be accessible at `http://ucsd-course-search.eastus.azurecontain
 ### Useful Commands for Logs and Debugging
 - **To Check the Container State:**
   ```sh
-  az container show --resource-group ucsdcoursesearch_group --name ucsdcoursesearch-container --query containers[0].instanceView.currentState.state
+  az container show --resource-group ucs-resource-group --name min-ucs-app-instance --query containers[0].instanceView.currentState.state
   ```
 - **To View Container Events:**
   ```sh
-  az container show --resource-group ucsdcoursesearch_group --name ucsdcoursesearch-container --query instanceView.events
+  az container show --resource-group ucs-resource-group --name min-ucs-app-instance --query instanceView.events
   ```
 - **To Access Container Logs:**
   ```sh
-  az container logs --resource-group ucsdcoursesearch_group --name ucsdcoursesearch-container
+  az container logs --resource-group ucs-resource-group --name min-ucs-app-instance
   ```

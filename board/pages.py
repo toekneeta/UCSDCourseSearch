@@ -5,7 +5,7 @@ import numpy as np
 import pyodbc
 
 bp = Blueprint("pages", __name__)
-df = pd.read_pickle("data\course_catalog_final.pkl")
+df = pd.read_pickle("data/course_catalog_final.pkl")
 
 @bp.route("/")
 def home():
@@ -23,6 +23,7 @@ def about():
 def search():
     data = request.json
     query = data.get('query')
+    springOnly = data.get('springOnly')
     upper_div = data.get('upperDivision')
     lower_div = data.get('lowerDivision')
     graduate = data.get('graduate')
@@ -31,7 +32,7 @@ def search():
     k = data.get('k')
 
     # performing search
-    data = flag_search.filter(df, upper_div, lower_div, graduate, include, exclude)
+    data = flag_search.filter(df, springOnly, upper_div, lower_div, graduate, include, exclude)
     # results = embedding_search.emb_search(query, k, data)
     results = flag_search.search(query, data, k)
     # results = course_search.es_search(query, upper_div, lower_div, graduate, include, exclude, k)

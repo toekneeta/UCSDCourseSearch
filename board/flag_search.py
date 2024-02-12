@@ -16,7 +16,7 @@ model = FlagModel('BAAI/bge-small-en-v1.5',
                 use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation;
     
 
-def filter(df, upper_div, lower_div, graduate, include, exclude):
+def filter(df, springOnly, upper_div, lower_div, graduate, include, exclude):
     """
     Optimized filter function for a DataFrame based on level of study and department inclusion/exclusion.
 
@@ -39,6 +39,8 @@ def filter(df, upper_div, lower_div, graduate, include, exclude):
         conditions |= (df['Level'] == 'Lower Division')
     if graduate:
         conditions |= (df['Level'] == 'Graduate')
+    if springOnly:
+        conditions &= (df['Spring'] == 'T')
     
     # Apply level filtering
     df = df[conditions]
@@ -91,7 +93,7 @@ def search(query, data, k):
     # if the query is a course code, return just the row containing the course code
     if query.upper() in data['Code'].values:
         exact_code = data[data['Code'] == query.upper()].iloc[0]
-        return [(exact_code['Code'], exact_code['Title'], 1.0)] # return the row of the exact course match (sim = 1.0)
+        return [(exact_code['Code'], exact_code['Title'], exact_code['Description'], exact_code['Prerequisites'], exact_code['URL'], exact_code['Spring'])] 
 
     # gets the embedding of the query
     query_embedding = preprocess_and_embed(query)

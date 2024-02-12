@@ -9,18 +9,6 @@ document.getElementById("search-input").addEventListener("keypress", function(ev
         sendSearch();
     }
 });
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     // Select all buttons with the class 'circle-btn'
-//     const buttons = document.querySelectorAll('.circle-btn');
-
-//     // Add click event listener to each button
-//     buttons.forEach(button => {
-//         button.addEventListener('click', function() {
-//             // Change the button's background color to rgb(14, 152, 186)
-//             this.style.backgroundColor = 'rgb(14, 152, 186)';
-//         });
-//     });
-// });
 
 document.addEventListener('click', function(event) {
     var button = event.target.closest('button');
@@ -56,7 +44,7 @@ function logFeedback(button) {
     var query = document.getElementById('search-input').value;
 
     // Determine whether the green or red button was clicked
-    var buttonType = button.classList.contains('green') ? 'Green' : 'Red';
+    var buttonType = button.classList.contains('green') ? 'Green' : 'Red'; 
 
     // Change the button color to blue to show it was clicked
     button.style.backgroundColor = 'rgb(14, 152, 186)';
@@ -85,6 +73,7 @@ function logFeedback(button) {
 
 function sendSearch() {
     var query = document.getElementById('search-input').value;
+    var springOnly = document.getElementById('spring-courses-checkbox').checked;
     var upperDivision = document.getElementById('upper-div-checkbox').checked;
     var lowerDivision = document.getElementById('lower-div-checkbox').checked;
     var graduate = document.getElementById('graduate-checkbox').checked;
@@ -94,6 +83,7 @@ function sendSearch() {
     var numberOfResults = selectedButton ? selectedButton.value : '10'; // Default to 10 if none is selected
     var filterParams = {
         query: query,
+        springOnly: springOnly,
         upperDivision: upperDivision,
         lowerDivision: lowerDivision,
         graduate: graduate,
