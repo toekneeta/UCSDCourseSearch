@@ -36,6 +36,7 @@ To run the Jupyter notebooks included in this project, follow these steps:
 #### Publishing the Docker Image
 Execute the following commands to build and publish the Docker image: (replace names with your own)
 0. **Login to Docker Hub and create a Repository**
+
 1. **Build the Docker Image:**
    ```sh
    docker build -t ucsdcoursesearch-docker .
