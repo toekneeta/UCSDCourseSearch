@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>About</title>
+
+    <div class="navbar">
+        <a href="{{ url_for('pages.home') }}">Home</a>
+        <a href="{{ url_for('pages.about') }}">About</a>
+        <a href="{{ url_for('pages.feedback') }}">Feedback</a>
+    </div>
+</head>
+<body>
+    <br>
+    <br>
+    <div class="about">
+        <p>Hello, this website is designed to be a semantic search for UCSD classes! Feel free to search for any topics you're interested in and further refine your searches with our filters!</p>
+        
+        <h3>Here's some tips on using our search:</h3>
+        <ul>
+            <li>Highlighted courses are offered Spring 2024.</li>
+            <li>For each search result, its CAPES can be found by clicking the course code.</li>
+            <li>Rate the relevance of search results with the thumbs up/down buttons.</li>
+            <li>Filtering by departments is case-insensitive (just make sure department codes are spelled correctly and separated by commas).</li>
+        </ul>
+        
+        <h3>Things to come:</h3>
+        <ul>
+            <li>Being able to search for classes by code.</li>
+            <li>General UI improvements.</li>
+        </ul>
+        
+        <p>Disclaimer: The course availability on this website may not reflect all courses offered at UCSD. If there are any discrepancies (or if you have any general feedback), please let us know in Feedback!</p>
+    </div>
+    
+    
+</body>
+</html>

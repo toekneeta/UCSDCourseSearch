@@ -208,16 +208,41 @@ body {
     border: 1px solid #ddd;
 }
 
+.result-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px; /* Adjust as needed */
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.result-box.spring {
+    background-color: rgb(234, 221, 202); 
+}
+
 .class-code {
     font-weight: bold;
     color: rgba(238, 108, 77);
     width: 10%;
+    font-size: 18px;
 }
 
+.class-code.spring {
+    color: rgba(139, 64, 0);
+}
+
+
 .class-title {
-    color: rgba(243, 141, 104);
+    color: rgba(238, 108, 77);
     margin-left: 5px;
     width: 15%;
+    font-size: 18px;
+}
+
+.class-title.spring {
+    color: rgba(203, 101, 64);
 }
 
 .class-description {
@@ -225,14 +250,20 @@ body {
     color: rgba(237, 246, 249);
     width: 50%;
 }
+.class-description.spring {
+    /* margin-top: 10px; */
+    color: black;
+}
 
 .class-prerequisites {
     /* margin-top: 10px; */
     color: rgba(237, 246, 249);
     width: 17%;
 }
-
-
+.class-prerequisites.spring {
+    /* margin-top: 10px; */
+    color: black;
+}
 
 .feedback {
     width:5%;
@@ -310,11 +341,55 @@ body {
     color: white;
 }
 
+.custom-link {
+    color: rgba(243, 141, 104) !important; /* Use !important to ensure it overrides any other link color styles */
+}
 
+.custom-link.spring{
+    color:rgb(139, 64, 0) !important;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    overflow: hidden;
+    background-color: #333; /* Dark background color */
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white; /* Text color */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+    color: black; /* Text color on hover */
+}
+
+.about {
+    background-color: rgb(234, 221, 202); /* Light grey background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    line-height: 1.6; /* Improved line spacing */
+    width: 60%;
+
+}
+
+.about p {
+    margin-bottom: 16px; /* Space between paragraphs */
+}
 
 
 /* Credits
 
-Search engine design - ChatGPT (prompted with image)
+Search engine design - ChatGPT 
 
 */

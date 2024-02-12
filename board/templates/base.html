@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="script.js" defer></script> -->
     <script src="{{ url_for('static', filename='script.js') }}" defer></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-   
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <!-- search icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- filter icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- thumbs icon-->>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- thumbs icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="{{ url_for('pages.home') }}">Home</a>
+        <a href="{{ url_for('pages.about') }}">About</a>
+        <a href="{{ url_for('pages.feedback') }}">Feedback</a>
+    </div>
 
     <title>UCSD Course Search </title>
+
 </head>
 <body>
     <div class="website-title">
@@ -45,9 +51,6 @@
             
                 <input type="checkbox" id="upper-div-checkbox" name="upper-div-checkbox" value="Option2" checked>
                 <label for="upper-div-checkbox">Upper Division</label><br>
-            
-                <!-- <input type="checkbox" id="undergraduate-checkbox" name="undergraduate-checkbox" value="Option3" checked>
-                <label for="undergraduate-checkbox">Undergraduate</label><br> -->
             
                 <input type="checkbox" id="graduate-checkbox" name="graduate-checkbox" value="Option4" checked>
                 <label for="graduate-checkbox">Graduate</label><br>
@@ -77,7 +80,5 @@
         </div>
     </div>
     <div id="results"></div>
-  
-    
 </body>
 </html>

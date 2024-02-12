@@ -9,6 +9,18 @@ document.getElementById("search-input").addEventListener("keypress", function(ev
         sendSearch();
     }
 });
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     // Select all buttons with the class 'circle-btn'
+//     const buttons = document.querySelectorAll('.circle-btn');
+
+//     // Add click event listener to each button
+//     buttons.forEach(button => {
+//         button.addEventListener('click', function() {
+//             // Change the button's background color to rgb(14, 152, 186)
+//             this.style.backgroundColor = 'rgb(14, 152, 186)';
+//         });
+//     });
+// });
 
 document.addEventListener('click', function(event) {
     var button = event.target.closest('button');
@@ -34,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 function logFeedback(button) {
     // Find the parent result-box of the clicked button
     var resultBox = button.closest('.result-box');
@@ -45,16 +56,32 @@ function logFeedback(button) {
     var query = document.getElementById('search-input').value;
 
     // Determine whether the green or red button was clicked
-    var buttonType = button.classList.contains('green') ? 'Green (Thumbs Up)' : 'Red (Thumbs Down)';
+    var buttonType = button.classList.contains('green') ? 'Green' : 'Red';
 
-    // Log the information
-    console.log({
-        'Button Pressed':buttonType,
-        'Query':query,
-        'Class Code':classCode,
-        'Class Title:':classTitle,
+    // Change the button color to blue to show it was clicked
+    button.style.backgroundColor = 'rgb(14, 152, 186)';
+    
+    // Prepare the data to be sent
+    var feedbackData = {
+        'ButtonPressed': buttonType,
+        'Query': query,
+        'ClassCode': classCode,
+        'ClassTitle': classTitle,
+    };
+
+    // Send the data to the Flask backend
+    fetch('/log-feedback', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(feedbackData),
     })
+    .then(response => response.json())
+    .then(data => console.log('Feedback logged:', data))
+    .catch((error) => console.error('Error:', error));
 }
+
 
 function sendSearch() {
     var query = document.getElementById('search-input').value;
@@ -63,7 +90,6 @@ function sendSearch() {
     var graduate = document.getElementById('graduate-checkbox').checked;
     var classesToInclude = document.getElementById('departmentsInclude').value;
     var classesToExclude = document.getElementById('departmentsExclude').value;
-    // var numberOfResults = document.getElementById('results-number-select').value;
     var selectedButton = document.querySelector('.number-button.selected');
     var numberOfResults = selectedButton ? selectedButton.value : '10'; // Default to 10 if none is selected
     var filterParams = {
@@ -87,7 +113,6 @@ function sendSearch() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(2)
         display(data); // Call the display function with the filtered data
     })
     .catch((error) => {
@@ -97,11 +122,8 @@ function sendSearch() {
 
 function display(data) {
     var resultsDiv = document.getElementById('results');
-    console.log(1)
-    console.log(data)
-
     resultsDiv.innerHTML = '';
-
+    
     resultsDiv.innerHTML += `
         <div class="result-box">
             <span class="class-code">Course Code </span>
@@ -112,19 +134,47 @@ function display(data) {
         </div>`;
 
     data.forEach(function(item){
-        // Assuming each 'item' is an array with three elements
+        // Assuming each 'item' is an array with five elements
         let classCode = item[0]; // Class code
         let classTitle = item[1]; // Class title
         let classDescription = item[2]; // Class description
-        let classPrerequisites = item[3]; // Prereqs
+        let classPrerequisites = item[3]; // Prerequisites
+        let capesURL = item[4]; // URL for class code link
+        let spring = item[5]; // Spring availability
 
-        if (classPrerequisites==null){
-            classPrerequisites = "no prequisites required";
-        } 
+        // Fallback for missing prerequisites
+        if (classPrerequisites == null) {
+            classPrerequisites = "No prerequisites required";
+        }
+        // Update to include class code as a link
+        // resultsDiv.innerHTML += `
+        // <div class="result-box spring">
+        //     <span class="class-code"><a href="${capesURL}" target="_blank" class="custom-link">${classCode}</a></span>
+        //     <span class="class-title">${classTitle}</span>
+        //     <div class="class-description spring">${classDescription}</div>
+        //     <div class="class-prerequisites spring">${classPrerequisites}</div>
+        //     <div class="feedback">
+        //         <button class="circle-btn green"><i class="fas fa-thumbs-up"></i></button>
+        //         <button class="circle-btn red"><i class="fas fa-thumbs-down"></i></button>
+        //     </div>
+        // </div>`;
 
-        resultsDiv.innerHTML += `
+        if (spring=="T") {
+            resultsDiv.innerHTML += `
+            <div class="result-box spring">
+                <span class="class-code spring"><a href="${capesURL}" target="_blank" class="custom-link spring">${classCode}</a></span>
+                <span class="class-title spring">${classTitle}</span>
+                <div class="class-description spring">${classDescription}</div>
+                <div class="class-prerequisites spring">${classPrerequisites}</div>
+                <div class="feedback">
+                    <button class="circle-btn green"><i class="fas fa-thumbs-up"></i></button>
+                    <button class="circle-btn red"><i class="fas fa-thumbs-down"></i></button>
+                </div>
+            </div>`;
+        } else {
+            resultsDiv.innerHTML += `
             <div class="result-box">
-                <span class="class-code">${classCode}</span>
+                <span class="class-code"><a href="${capesURL}" target="_blank" class="custom-link">${classCode}</a></span>
                 <span class="class-title">${classTitle}</span>
                 <div class="class-description">${classDescription}</div>
                 <div class="class-prerequisites">${classPrerequisites}</div>
@@ -133,5 +183,9 @@ function display(data) {
                     <button class="circle-btn red"><i class="fas fa-thumbs-down"></i></button>
                 </div>
             </div>`;
-    });
+    }
+        });
+
+
+
 }

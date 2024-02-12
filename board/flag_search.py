@@ -4,12 +4,11 @@ import numpy as np
 import pandas as pd
 import heapq
 import re
-import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-nltk.download('stopwords')
+# nltk.download('stopwords')
 # loading model
 model = FlagModel('BAAI/bge-small-en-v1.5', 
                 query_instruction_for_retrieval="Represent this sentence for searching relevant passages: ",
@@ -25,8 +24,8 @@ def filter(df, upper_div, lower_div, graduate, include, exclude):
     - upper_div: Boolean, True to include Upper Division levels.
     - lower_div: Boolean, True to include Lower Division levels.
     - graduate: Boolean, True to include Graduate levels.
-    - include: List of departments to include.
-    - exclude: List of departments to exclude.
+    - include: String of departments to include (depts separated with commas)
+    - exclude: String of departments to exclude (depts separated with commas)
 
     Returns:
     - Optimized filtered DataFrame based on the specified criteria.
@@ -42,12 +41,15 @@ def filter(df, upper_div, lower_div, graduate, include, exclude):
     
     # Apply level filtering
     df = df[conditions]
-    
+
     # Apply department inclusion and exclusion
     if include:
-        df = df[df['Department'].isin(include)]
+        include_list = include.upper().replace(",", " ").split()
+        print(include_list)
+        df = df[df['Department'].isin(include_list)]
     if exclude:
-        df = df[~df['Department'].isin(exclude)]
+        exclude_list = exclude.upper().replace(",", " ").split()
+        df = df[~df['Department'].isin(exclude_list)]
     
     # Reset index
     df = df.reset_index(drop=True)
@@ -106,8 +108,9 @@ def search(query, data, k):
     ranked_docs = []
     for ind, sim in index_similarity_pair_ranked:
         # don't include results that have similarity score < 0.7 unless it's the top result
-        if sim < 0.7 and ranked_docs: break
+        # if sim < 0.7 and ranked_docs : break
         # grab the course code, the course title, and the similarity score
-        ranked_docs.append((data['Code'][ind], data['Title'][ind],  data['Description'][ind],  data['Prerequisites'][ind]))
+        # ranked_docs.append((data['Code'][ind], data['Title'][ind],  data['Description'][ind],  data['Prerequisites'][ind], data['URL'][ind]))
+        ranked_docs.append((data['Code'][ind], data['Title'][ind],  data['Description'][ind],  data['Prerequisites'][ind], data['URL'][ind], data['Spring'][ind]))
     
     return ranked_docs
