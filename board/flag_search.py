@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import heapq
 import re
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -87,6 +88,11 @@ def search(query, data, k):
     title_embeddings = data['Title Embeddings']
     desc_embeddings = data['Description Embeddings']
 
+    # if the query is a course code, return just the row containing the course code
+    if query.upper() in data['Code'].values:
+        exact_code = data[data['Code'] == query.upper()].iloc[0]
+        return [(exact_code['Code'], exact_code['Title'], 1.0)] # return the row of the exact course match (sim = 1.0)
+
     # gets the embedding of the query
     query_embedding = preprocess_and_embed(query)
     
@@ -107,10 +113,7 @@ def search(query, data, k):
     
     ranked_docs = []
     for ind, sim in index_similarity_pair_ranked:
-        # don't include results that have similarity score < 0.7 unless it's the top result
-        # if sim < 0.7 and ranked_docs : break
-        # grab the course code, the course title, and the similarity score
-        # ranked_docs.append((data['Code'][ind], data['Title'][ind],  data['Description'][ind],  data['Prerequisites'][ind], data['URL'][ind]))
+        # return the necessary information
         ranked_docs.append((data['Code'][ind], data['Title'][ind],  data['Description'][ind],  data['Prerequisites'][ind], data['URL'][ind], data['Spring'][ind]))
     
     return ranked_docs
