@@ -49,7 +49,7 @@ driver= '{ODBC Driver 18 for SQL Server}'
 def log_feedback():
     data = request.json
     # Update the connection string as per your Azure SQL Database details
-    conn_str = 'DRIVER={your_driver};SERVER=tcp:your_server,1433;DATABASE=your_database;UID=your_username;PWD=your_password;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+    conn_str = f'DRIVER={driver};SERVER=tcp:{server},1433;DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;'
     sql = """INSERT INTO FeedbackLog (Query, ClassCode, ClassTitle, NumberOfResults, SpringOnly, UpperDivision, LowerDivision, Graduate, Include, Exclude, ButtonType, Timestamp)
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, GETDATE())"""
     try:
