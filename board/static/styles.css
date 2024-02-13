@@ -12,6 +12,7 @@ body {
     font-family: Raleway;
     margin: center;
     background-color:rgba(28, 82, 83);
+    padding-bottom:5%;
 }
 
 .search-bar {
@@ -186,46 +187,33 @@ body {
     line-height: 1.5; /* Improve line height */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .text-boxes-container {
-        flex-direction: column;
-    }
-}
-
-#results{
+#results {
     width: 80%;
     margin: auto;
 }
 
 .result-box {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap; /* Allows content to wrap as needed */
+    justify-content: space-between; /* Spreads content out */
+    align-items: center; /* Ensures vertical alignment to the center for all items */
     width: 100%;
-    margin-bottom: 10px; /* Adjust as needed */
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.result-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px; /* Adjust as needed */
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
 }
 
 .result-box.spring {
-    background-color: rgb(234, 221, 202); 
+    background-color: rgb(234, 221, 202);
+}
+
+.class-code, .class-title, .class-description, .class-prerequisites {
+    padding: 5px;
 }
 
 .class-code {
     font-weight: bold;
     color: rgba(238, 108, 77);
-    width: 10%;
     font-size: 18px;
 }
 
@@ -233,11 +221,9 @@ body {
     color: rgba(139, 64, 0);
 }
 
-
 .class-title {
     color: rgba(238, 108, 77);
     margin-left: 5px;
-    width: 15%;
     font-size: 18px;
 }
 
@@ -246,59 +232,53 @@ body {
 }
 
 .class-description {
-    /* margin-top: 10px; */
     color: rgba(237, 246, 249);
-    width: 50%;
 }
+
 .class-description.spring {
-    /* margin-top: 10px; */
     color: black;
 }
 
 .class-prerequisites {
-    /* margin-top: 10px; */
     color: rgba(237, 246, 249);
-    width: 17%;
 }
+
 .class-prerequisites.spring {
-    /* margin-top: 10px; */
     color: black;
 }
 
 .feedback {
-    width:5%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack buttons on top of each other */
     align-items: center;
-    gap: 10px; /* Adjust the space between buttons */
+    gap: 10px;
     color: rgba(237, 246, 249);
-    
+    flex: 0 0 auto; /* Prevents feedback from growing or shrinking */
 }
 
 .circle-btn {
-    border-radius: 50%; /* Makes the button circular */
-    width: 40px; /* Adjust based on your needs */
-    height: 40px; /* Adjust based on your needs */
-    border: none; /* Removes the default border */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    outline: none; /* Removes the outline to keep the circular shape */
-    background-color: #007BFF; /* Example background color */
-    color: white; /* Icon color */
-    font-size: 16px; /* Adjust based on your needs */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .circle-btn.green {
-    background-color: #28a745; /* Green background color */
+    background-color: #28a745;
 }
 
 .circle-btn.red {
-    background-color: #dc3545; /* Red background color */
+    background-color: #dc3545;
 }
 
-/* Optional: Add a hover effect */
 .circle-btn.green:hover {
     background-color: rgb(0,127,29);
 }
@@ -306,6 +286,43 @@ body {
 .circle-btn.red:hover {
     background-color: rgb(180, 13, 29);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .result-box {
+        flex-direction: column;
+    }
+
+    .class-code, .class-title, .class-description, .class-prerequisites {
+        display: block;
+        width: 100%; /* Full width for better readability on small screens */
+    }
+
+    .feedback {
+        flex-direction: row; /* Align buttons side by side on mobile */
+        justify-content: center; /* Center the buttons horizontally */
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .result-box {
+        justify-content: space-between;
+    }
+
+    .class-code, .class-title, .class-description, .class-prerequisites {
+        flex: 1; /* Allows these elements to grow */
+    }
+
+    .class-description {
+        flex: 2; /* Allows description to take up more space */
+    }
+
+    .feedback {
+        flex: 0 0 auto; /* Keeps feedback from growing or shrinking */
+    }
+}
+
 
 .results-number-container {
     display: flex; /* Aligns the label and buttons in a row */

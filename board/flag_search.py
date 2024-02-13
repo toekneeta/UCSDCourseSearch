@@ -115,6 +115,9 @@ def search(query, data, k):
     
     ranked_docs = []
     for ind, sim in index_similarity_pair_ranked:
+        # if cosine similarity < 0.7 and at least 3 courses have been added to search results, stop adding to search results
+        if sim < 0.7 and len(ranked_docs) >= 3:
+            break
         # return the necessary information
         ranked_docs.append((data['Code'][ind], data['Title'][ind],  data['Description'][ind],  data['Prerequisites'][ind], data['URL'][ind], data['Spring'][ind]))
     

@@ -3,20 +3,7 @@ function toggleDropdown() {
     dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
 }
 
-document.getElementById("search-input").addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault(); // Prevent the default action to avoid form submission (if applicable)
-        sendSearch();
-    }
-});
-
-document.addEventListener('click', function(event) {
-    var button = event.target.closest('button');
-    if (button && button.classList.contains('circle-btn') && button.closest('.result-box')) {
-        logFeedback(button);
-    }
-});
-
+// Selecting number of results (only 1 can be selected at a time)
 document.addEventListener('DOMContentLoaded', function() {
     var buttons = document.querySelectorAll('.number-button');
 
@@ -27,11 +14,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Add 'selected' class to the clicked button
             button.classList.add('selected');
-
-            // Your logic to handle the selection can go here
-            console.log('Selected number of results:', button.value);
         });
     });
+});
+
+// Enter also runs search
+document.getElementById("search-input").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevent the default action to avoid form submission (if applicable)
+        sendSearch();
+    }
+});
+
+// Changing filters will run search
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownContent = document.getElementById('dropdownContent');
+
+    // Add event listener for checkbox changes
+    var checkboxes = dropdownContent.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', sendSearch);
+    });
+
+    // Add event listener for button clicks within the number-select button group
+    var numberButtons = dropdownContent.querySelectorAll('.number-button');
+    numberButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            numberButtons.forEach(btn => btn.classList.remove('selected'));
+            this.classList.add('selected');
+
+            sendSearch();
+        });
+    });
+
+    // Add event listener for text input changes with debouncing
+    var textAreas = dropdownContent.querySelectorAll('textarea');
+    textAreas.forEach(function(textArea) {
+        textArea.addEventListener('input', debounce(sendSearch, 500)); // Adjust the delay as needed
+    });
+});
+
+// Debounce function
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+function sendSearch() {
+    // Your sendSearch function's code here
+    console.log('Search criteria changed. Running sendSearch...');
+}
+
+
+// Logging feedback from buttons
+document.addEventListener('click', function(event) {
+    var button = event.target.closest('button');
+    if (button && button.classList.contains('circle-btn') && button.closest('.result-box')) {
+        logFeedback(button);
+    }
 });
 
 function logFeedback(button) {
@@ -69,7 +119,6 @@ function logFeedback(button) {
     .then(data => console.log('Feedback logged:', data))
     .catch((error) => console.error('Error:', error));
 }
-
 
 function sendSearch() {
     var query = document.getElementById('search-input').value;
@@ -111,71 +160,38 @@ function sendSearch() {
 }
 
 function display(data) {
+    // Add the initial entry to the beginning of the data array
+
     var resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = '';
+    resultsDiv.innerHTML = `
+    <div class="result-box">
+        <span class="class-code">Course Code </span>
+        <span class="class-title">Course Title</span>
+        <div class="class-description">Course Description</div>
+        <div class="class-prerequisites">Course Requirements</div>
+        <div class="feedback"></div>
+    </div>`;
     
-    resultsDiv.innerHTML += `
-        <div class="result-box">
-            <span class="class-code">Course Code </span>
-            <span class="class-title">Course Title</span>
-            <div class="class-description">Course Description</div>
-            <div class="class-prerequisites">Course Requirements</div>
-            <div class="feedback">Feedback</div>
+    data.forEach(function(item) {
+        let classCode = item[0]; 
+        let classTitle = item[1]; 
+        let classDescription = item[2]; 
+        let classPrerequisites = item[3] == null || item[3] == 'none' ? "No requirements." : item[3]; // Simplified prerequisites fallback
+        let capesURL = item[4]; 
+        let spring = item[5]; 
+
+        let resultBoxClass = spring == "T" ? 'result-box spring' : 'result-box';
+        let classCodeLink = `<a href="${capesURL}" target="_blank" class="custom-link ${spring == "T" ? 'spring' : ''}">${classCode}</a>`;
+
+        resultsDiv.innerHTML += `
+        <div class="${resultBoxClass}">
+            <span class="class-code ${spring == "T" ? 'spring' : ''}">${classCodeLink}</span>
+            <span class="class-title ${spring == "T" ? 'spring' : ''}">${classTitle}</span>
+            <span class="class-description ${spring == "T" ? 'spring' : ''}">${classDescription}</span>
+            <div class="class-prerequisites ${spring == "T" ? 'spring' : ''}">${classPrerequisites}</div>
+            <div class="feedback">
+                <button class="circle-btn green"><i class="fas fa-thumbs-up"></i></button>
+                <button class="circle-btn red"><i class="fas fa-thumbs-down"></i></button>
         </div>`;
-
-    data.forEach(function(item){
-        // Assuming each 'item' is an array with five elements
-        let classCode = item[0]; // Class code
-        let classTitle = item[1]; // Class title
-        let classDescription = item[2]; // Class description
-        let classPrerequisites = item[3]; // Prerequisites
-        let capesURL = item[4]; // URL for class code link
-        let spring = item[5]; // Spring availability
-
-        // Fallback for missing prerequisites
-        if (classPrerequisites == null) {
-            classPrerequisites = "No prerequisites required";
-        }
-        // Update to include class code as a link
-        // resultsDiv.innerHTML += `
-        // <div class="result-box spring">
-        //     <span class="class-code"><a href="${capesURL}" target="_blank" class="custom-link">${classCode}</a></span>
-        //     <span class="class-title">${classTitle}</span>
-        //     <div class="class-description spring">${classDescription}</div>
-        //     <div class="class-prerequisites spring">${classPrerequisites}</div>
-        //     <div class="feedback">
-        //         <button class="circle-btn green"><i class="fas fa-thumbs-up"></i></button>
-        //         <button class="circle-btn red"><i class="fas fa-thumbs-down"></i></button>
-        //     </div>
-        // </div>`;
-
-        if (spring=="T") {
-            resultsDiv.innerHTML += `
-            <div class="result-box spring">
-                <span class="class-code spring"><a href="${capesURL}" target="_blank" class="custom-link spring">${classCode}</a></span>
-                <span class="class-title spring">${classTitle}</span>
-                <div class="class-description spring">${classDescription}</div>
-                <div class="class-prerequisites spring">${classPrerequisites}</div>
-                <div class="feedback">
-                    <button class="circle-btn green"><i class="fas fa-thumbs-up"></i></button>
-                    <button class="circle-btn red"><i class="fas fa-thumbs-down"></i></button>
-                </div>
-            </div>`;
-        } else {
-            resultsDiv.innerHTML += `
-            <div class="result-box">
-                <span class="class-code"><a href="${capesURL}" target="_blank" class="custom-link">${classCode}</a></span>
-                <span class="class-title">${classTitle}</span>
-                <div class="class-description">${classDescription}</div>
-                <div class="class-prerequisites">${classPrerequisites}</div>
-                <div class="feedback">
-                    <button class="circle-btn green"><i class="fas fa-thumbs-up"></i></button>
-                    <button class="circle-btn red"><i class="fas fa-thumbs-down"></i></button>
-                </div>
-            </div>`;
-    }
-        });
-
-
-
+    });
 }
