@@ -48,14 +48,16 @@ driver= '{ODBC Driver 18 for SQL Server}'
 @bp.route('/log-feedback', methods=['POST'])
 def log_feedback():
     data = request.json
-    # Connect to Azure SQL Database and insert feedback
-    conn_str = f'DRIVER={driver};SERVER=tcp:{server},1433;DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
-    sql = """INSERT INTO FeedbackLog (ButtonPressed, Query, ClassCode, ClassTitle, Timestamp)
-             VALUES (?, ?, ?, ?, GETDATE())"""
+    # Update the connection string as per your Azure SQL Database details
+    conn_str = 'DRIVER={your_driver};SERVER=tcp:your_server,1433;DATABASE=your_database;UID=your_username;PWD=your_password;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+    sql = """INSERT INTO FeedbackLog (Query, ClassCode, ClassTitle, NumberOfResults, SpringOnly, UpperDivision, LowerDivision, Graduate, Include, Exclude, ButtonType, Timestamp)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, GETDATE())"""
     try:
         with pyodbc.connect(conn_str) as conn:
             with conn.cursor() as cursor:
-                cursor.execute(sql, (data['ButtonPressed'], data['Query'], data['ClassCode'], data['ClassTitle']))
+                cursor.execute(sql, (data['Query'], data['ClassCode'], data['ClassTitle'], data['NumberOfResults'], 
+                                     data['SpringOnly'], data['UpperDivision'], data['LowerDivision'], data['Graduate'], 
+                                     data['Include'], data['Exclude'], data['ButtonType']))
                 conn.commit()
         return jsonify({'status': 'success', 'message': 'Feedback logged'})
     except Exception as e:

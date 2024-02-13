@@ -70,12 +70,6 @@ function debounce(func, wait, immediate) {
     };
 }
 
-function sendSearch() {
-    // Your sendSearch function's code here
-    console.log('Search criteria changed. Running sendSearch...');
-}
-
-
 // Logging feedback from buttons
 document.addEventListener('click', function(event) {
     var button = event.target.closest('button');
@@ -92,21 +86,36 @@ function logFeedback(button) {
     var classCode = resultBox.querySelector('.class-code').textContent;
     var classTitle = resultBox.querySelector('.class-title').textContent;
     var query = document.getElementById('search-input').value;
+    // additional information
+    var springOnly = document.getElementById('spring-courses-checkbox').checked;
+    var upperDivision = document.getElementById('upper-div-checkbox').checked;
+    var lowerDivision = document.getElementById('lower-div-checkbox').checked;
+    var graduate = document.getElementById('graduate-checkbox').checked;
+    var classesToInclude = document.getElementById('departmentsInclude').value;
+    var classesToExclude = document.getElementById('departmentsExclude').value;
+    var numberOfResults = document.querySelector('.number-button.selected').value;
 
     // Determine whether the green or red button was clicked
     var buttonType = button.classList.contains('green') ? 'Green' : 'Red'; 
 
     // Change the button color to blue to show it was clicked
     button.style.backgroundColor = 'rgb(14, 152, 186)';
-    
+
     // Prepare the data to be sent
     var feedbackData = {
-        'ButtonPressed': buttonType,
-        'Query': query,
-        'ClassCode': classCode,
-        'ClassTitle': classTitle,
+        Query: query,
+        ClassCode: classCode,
+        ClassTitle: classTitle,
+        NumberOfResults: numberOfResults,
+        SpringOnly: springOnly,
+        UpperDivision: upperDivision,
+        LowerDivision: lowerDivision,
+        Graduate: graduate,
+        Include: classesToInclude,
+        Exclude: classesToExclude,
+        ButtonType: buttonType,
     };
-
+    
     // Send the data to the Flask backend
     fetch('/log-feedback', {
         method: 'POST',
