@@ -3,18 +3,14 @@ from FlagEmbedding import FlagModel
 import numpy as np
 import pandas as pd
 import heapq
-import re
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
+import spacy
 
-# nltk.download('stopwords')
+# loading spacy
+nlp = spacy.load('en_core_web_sm')
 # loading model
 model = FlagModel('BAAI/bge-small-en-v1.5', 
                 query_instruction_for_retrieval="Represent this sentence for searching relevant passages: ",
                 use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation;
-    
 
 def filter(df, springOnly, upper_div, lower_div, graduate, include, exclude):
     """
@@ -59,22 +55,8 @@ def filter(df, springOnly, upper_div, lower_div, graduate, include, exclude):
     return df
  
 def preprocess_and_embed(text):
-     # Convert to lowercase
-    text = text.lower()
-    
-    # Tokenizes text
-    tokens = re.split(r'[^a-zA-Z0-9]+', text)
-    
-    # Remove stopwords
-    stop_words = set(stopwords.words('english'))
-    tokens = [token for token in tokens if token not in stop_words]
-    
-    # Lemmatize
-    lemmatizer = WordNetLemmatizer()
-    tokens = [lemmatizer.lemmatize(token) for token in tokens]
-    
-    preprocessed_text = ' '.join(tokens)
-    return model.encode_queries(preprocessed_text)
+    preprocessed_text = str(nlp(text))
+    return model.encode(preprocessed_text)
 
 def cosine_similarity(vec1, vec2):
     """

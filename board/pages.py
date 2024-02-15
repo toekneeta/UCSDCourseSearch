@@ -33,9 +33,7 @@ def search():
 
     # performing search
     data = flag_search.filter(df, springOnly, upper_div, lower_div, graduate, include, exclude)
-    # results = embedding_search.emb_search(query, k, data)
     results = flag_search.search(query, data, k)
-    # results = course_search.es_search(query, upper_div, lower_div, graduate, include, exclude, k)
 
     return jsonify(results)
 
@@ -46,18 +44,37 @@ password = 'ucsd-course-search9'
 driver= '{ODBC Driver 18 for SQL Server}'
 
 @bp.route('/log-feedback', methods=['POST'])
+# @profile_route  # Apply the profiling decorator here
 def log_feedback():
     data = request.json
     # Update the connection string as per your Azure SQL Database details
     conn_str = f'DRIVER={driver};SERVER=tcp:{server},1433;DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;'
-    sql = """INSERT INTO FeedbackLog (Query, ClassCode, ClassTitle, NumberOfResults, SpringOnly, UpperDivision, LowerDivision, Graduate, Include, Exclude, ButtonType, Timestamp)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, GETDATE())"""
+    sql = """INSERT INTO InteractionsLog (Query, ClassCode, ClassTitle, NumberOfResults, SpringOnly, UpperDivision, LowerDivision, Graduate, Include, Exclude, ButtonType, ResultIndex, Timestamp)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, GETDATE())"""
     try:
         with pyodbc.connect(conn_str) as conn:
             with conn.cursor() as cursor:
                 cursor.execute(sql, (data['Query'], data['ClassCode'], data['ClassTitle'], data['NumberOfResults'], 
                                      data['SpringOnly'], data['UpperDivision'], data['LowerDivision'], data['Graduate'], 
-                                     data['Include'], data['Exclude'], data['ButtonType']))
+                                     data['Include'], data['Exclude'], data['ButtonType'], data['ResultIndex']))
+                conn.commit()
+        return jsonify({'status': 'success', 'message': 'Feedback logged'})
+    except Exception as e:
+        print(str(e))
+        return jsonify({'status': 'error', 'message': 'Failed to log feedback'}), 500
+    
+@bp.route('/log-survey', methods=['POST'])
+# @profile_route  # Apply the profiling decorator here
+def log_survey():
+    data = request.json
+    # Update the connection string as per your Azure SQL Database details
+    conn_str = f'DRIVER={driver};SERVER=tcp:{server},1433;DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=60;'
+    sql = """INSERT INTO SurveyLog (Likes, Dislike, Features, Comments, Timestamp)
+             VALUES (?, ?, ?, ?, GETDATE())"""
+    try:
+        with pyodbc.connect(conn_str) as conn:
+            with conn.cursor() as cursor:
+                cursor.execute(sql, (data['likes'], data['dislikes'], data['features'], data['comments']))
                 conn.commit()
         return jsonify({'status': 'success', 'message': 'Feedback logged'})
     except Exception as e:

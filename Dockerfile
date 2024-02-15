@@ -39,12 +39,8 @@ RUN pip install --no-cache-dir /wheels/* \
     && rm -rf /wheels
 
 # Copying application data
-COPY nltk_data ./nltk_data
 COPY board ./board
 COPY data/course_catalog_final.pkl ./data/
-
-# NLTK data environment variable is correctly set
-ENV NLTK_DATA /app/nltk_data
 
 # Expose the port the app runs on
 EXPOSE 8000
