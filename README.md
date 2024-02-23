@@ -4,7 +4,7 @@
 ## Project Overview
 This project develops a web application that enables users to search through UCSD courses using semantic search capabilities. It leverages a weighted cosine similarity algorithm to compare the query embeddings with the embeddings of course titles and descriptions, ensuring relevant search results. The core of this semantic search functionality is powered by the FlagModel BAAI/bge-small-en-v1.5 embedding model. For more details on the embedding model, visit [Hugging Face's model repository](https://huggingface.co/BAAI/bge-small-en-v1.5).
 
-If you would just like to visit the website: [http://ucsd-course-search.eastus.azurecontainer.io:8000/](http://ucsd-course-search.westus2.azurecontainer.io:8000/)
+If you would just like to visit the website: [http://ucsd-course-search.westus2.azurecontainer.io:8000/](http://ucsd-course-search.westus2.azurecontainer.io:8000/)
 
 ## Getting Started
 
