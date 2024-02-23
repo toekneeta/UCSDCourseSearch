@@ -1,3 +1,8 @@
+---
+layout: default
+title: UCSDCourseSearch
+---
+
 # Welcome to UCSDCourseSearch!
 
 - [UCSDCourseSearch Website](http://ucsd-course-search.westus2.azurecontainer.io:8000/)
