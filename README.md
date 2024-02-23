@@ -4,7 +4,7 @@
 ## Project Overview
 This project develops a web application that enables users to search through UCSD courses using semantic search capabilities. It leverages a weighted cosine similarity algorithm to compare the query embeddings with the embeddings of course titles and descriptions, ensuring relevant search results. The core of this semantic search functionality is powered by the FlagModel BAAI/bge-small-en-v1.5 embedding model. For more details on the embedding model, visit [Hugging Face's model repository](https://huggingface.co/BAAI/bge-small-en-v1.5).
 
-If you would just like to visit the website: http://ucsd-course-search.eastus.azurecontainer.io:8000/
+If you would just like to visit the website: [http://ucsd-course-search.eastus.azurecontainer.io:8000/](http://ucsd-course-search.westus2.azurecontainer.io:8000/)
 
 ## Getting Started
 
@@ -35,21 +35,21 @@ To run the Jupyter notebooks included in this project, follow these steps:
 
 #### Publishing the Docker Image
 Execute the following commands to build and publish the Docker image: (replace names with your own)
-0. **Login to Docker Hub and create a Repository**
+1. **Login to Docker Hub and create a Repository**
 
-1. **Build the Docker Image:**
+2. **Build the Docker Image:**
    ```sh
    docker build -t ucsdcoursesearch-docker .
    ```
-2. **Tag the Docker Image:**
+3. **Tag the Docker Image:**
    ```sh
    docker tag ucsdcoursesearch-docker:latest mfrankne/ucsdcoursesearch:latest
    ```
-3. **Push the Docker Image to a Registry:**
+4. **Push the Docker Image to a Registry:**
    ```sh
    docker push mfrankne/ucsdcoursesearch:latest
    ```
-4. **Login to Azure:**
+5. **Login to Azure:**
    ```sh
    az login
    ```
