@@ -1,6 +1,4 @@
-remote_theme: jekyll-whiteglass
+theme: jekyll-whiteglass
 title: UCSDCourseSearch
 description: A semantic search engine for UCSD courses
 
-plugins:
-- jekyll-remote-theme

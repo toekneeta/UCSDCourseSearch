@@ -1,0 +1,68 @@
+Query,Class Code,Class Title,Relevance
+bones,ANTH 5,The Human Machine: The Skeleton Within,1
+bones,ANBI 143,The Human Skeleton,2
+bones,ANBI 117,Ancient Genomics: Who We Are and How We Got Here,3
+bones,BENG 232, ,2
+bones,ANBI 145,Bioarcheology,2
+epidemiology,ANBI 139,Evolution of Human Disease,1
+epidemiology,BIMM 110,Molecular Basis of Human Disease,2
+epidemiology,ANBI 130,Biology of Inequality,2
+epidemiology,ANBI 141,The Evolution of the Human Diet,3
+epidemiology,ANSC 139,Native American Health and Healing,2
+epidemiology,ANSC 237,Native American Health and Healing,2
+epidemiology,ANSC 148,Global Health and Cultural Diversity,1
+epidemiology,GLBH 148,Global Health and Cultural Diversity,1 
+epidemiology,ANSC 164,Introduction to Medical Anthropology,2
+epidemiology,GLBH 102,Global Health Epidemiology,1
+beginner python,COGS 18,Introduction to Python,1
+beginner python,BILD 62,Introduction to Python for Biologists,2
+beginner python,COGS 209,Scientific Data Analysis and Statistical Learning,2
+beginner python,CSS 1,Introductory Programming for Computational Social Science,1
+beginner python,CSS 2,Data and Model Programming for Computation Social Science,2
+beginner python,CSS 202S,Computational Social Science Technical Boot Camp,2
+beginner python,DSC 10, Principles of Data Science,2
+beginner python,DSC 207R,Python for Data Science,2
+SQL,DSC 100, Introduction to Data Management,1
+SQL,CSE 135,Online Database Analytics Applications,2
+SQL,DSE 201,Database Management Systems,1
+SQL,MGT 153,Information Technology in Business Analytics,2
+SQL,MGTF 424,Data Science for Finance II - Machine Learning,2
+SQL,MGTA 464,SQL and ETL,1
+game theory,ECON 109,Game Theory,1
+game theory,ECON 109T,Advanced Topics in Game Theory,2
+game theory,POLI 100U,Games Strategy and Politics,2
+game theory,POLI 118,Game Theory in Political Science,1
+game theory,POLI 204C,Game Theory 1,1
+game theory,POLI 205,Game Theory 2,1
+computer art,VIS 10,Computing in the Arts Lecture Series,1
+computer art,VIS 154,History of Art and Technology,2
+computer art,VIS 174,Media Sketchbook,3
+computer art,VIS 141A,Computer Programming for the Arts I,1
+computer art,VIS 141B,Computer Programming for the Arts II,1
+climate change,ANTH 10,Climate Justice,2
+climate change,ANTH 105, ,2
+climate change,CCS 102,Research Perspectives on Climate Change,1
+climate change,BIEB 182,Biology of Global Change,1
+climate change,ECON 267,Topics in Environmental and Resource Economics,2
+climate change,HISC 133,History of Climate Change,1
+climate change,PHIL 26, ,3
+climate change,GPPA 464,Environmental Justice,1
+language attrition,LIGN 177,Multilingualism,1
+language attrition,LIGN 8,Languages and Cultures,2
+language attrition,LIGN 155,Evolution of Language,3
+language attrition,LIGN 5,The Linguistics of Invented Languages,3
+language attrition,LIGN 279,Topics in Language Aquisition,3
+nuclear science,CHEM 6C,General Chemistry III,2
+nuclear science,PHYS 10,Concepts in Physics,2
+nuclear science,CHEM 307,Protein MMR,3
+nuclear science,ECON 132,Energy Economics,3
+nuclear science,MAE 120,Introduction to Nuclear Energy,1
+nuclear science,PHYS 12,Energy and the Environment,2
+nuclear science,POLI 142D,Weapons of Mass Destruction,2
+nuclear science,SOCI 167,Science and War,2
+religion,ANSC 120,Religion and Culture,1
+religion,ANSC 125, ,2
+religion,ANSC 154,Gender and Religion,1
+religion,LTWL 138,Critical Religion Studies,1
+religion,RELI 1,Introduction to Religion,1
+religion,VIS 121B,Church and Mosque: Medieval Art and Architecture between Christianity and Islam,2

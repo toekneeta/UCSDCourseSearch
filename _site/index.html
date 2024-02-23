@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>UCSDCourseSearch</title>
+  <meta name="description" content="A semantic search engine for UCSD courses">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="UCSDCourseSearch" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+  <meta property="og:title" content="UCSDCourseSearch">
+  <meta property="og:site_name" content="UCSDCourseSearch">
+  <meta property="og:url" content="http://localhost:4000/">
+  <meta property="og:description" content="A semantic search engine for UCSD courses">
+  
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="UCSDCourseSearch">
+  <meta name="twitter:description" content="A semantic search engine for UCSD courses">
+  
+  
+
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">UCSDCourseSearch</a>
+
+    <nav class="site-nav">
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="welcome-to-ucsdcoursesearch">Welcome to UCSDCourseSearch!</h1>
+
+<ul>
+  <li><a href="http://ucsd-course-search.westus2.azurecontainer.io:8000/">UCSDCourseSearch Website</a></li>
+  <li><a href="https://github.com/toekneeta/UCSDCourseSearch/tree/main">GitHub Repository</a></li>
+  <li><a href="https://drive.google.com/file/d/16Lpo-LVNT5qIltTENZE-W6WIUBD6ONvk/view?usp=sharing">Report</a></li>
+  <li><a href="https://drive.google.com/file/d/1-Zt_e3IzYvBw3QLgD0F0rvuvow68wsTe/view?usp=sharing">Poster</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The <strong>UCSDCourseSearch</strong> project enables UCSD students to search for courses more conveniently. Our search engine improves on UCSD’s WebReg search function, which is limited to only finding exact matches from an user’s search query in course titles, using semantic search, a search technique that aims to understand the meaning and context of search queries to provide more relevant search results. This means that students no longer need to know the exact course name in order to search for it. Our search tool is able to understand the intent of the user’s search queries and finds the most similar courses to them.</p>
+
+<h2 id="how-it-works">How It Works</h2>
+
+<p>Our search engine uses the <a href="https://catalog.ucsd.edu/front/courses.html">UCSD course catalog</a>, which contains 7,169 courses across 173 departments, as its primary dataset and parses through these courses during the search process. Specifically, the course titles and descriptions are the documents that are being searched through.</p>
+
+<p>Using the <a href="https://huggingface.co/BAAI/bge-small-en-v1.5">FlagModel BAAI/bge-small-en-v1.5 embedding model</a>, the course titles and descriptions are embedded separately to create 2 sets of embeddings. These embeddings are numerical multi-dimensional vectors that represent the course titles and descriptions. The closer the distance between two vectors are to each other, the more similar they are.</p>
+
+<p>The search process begins by processing the user’s query along with other search parameters, such as filters and the desired number of results. Based on the user-specified filter criteria (<em>i.e. the user specifies they want to search for courses only in the DSC department</em>), irrelevant courses are discarded from the search process. The query is then embedded using the same FlagModel that is used to embed the course titles and descriptions.</p>
+
+<p>To find the most relevant courses to the query, the search function employs cosine similarity between the query’s embedding and the embeddings of the course title and description, separately. For each course, the similarity scores from the title and description are assigned weights and aggregated to calculate a final similarity score, with titles receiving a greater emphasis.</p>
+
+<p>The final step involves returning and displaying the results on our website, with the quantity of displayed results being determined by the user’s initial selection of the number of outcomes desired.</p>
+
+<h2 id="evaluating-our-search-engine--what-it-means">Evaluating our Search Engine &amp; What it Means</h2>
+
+<p>To evaluate our search, we created another search engine using ElasticSearch. This search engine doesn’t employ semantic search, but instead uses a traditional keyword search. We also found another search function called <a href="https://tritonsearch.xyz/">TritonSearch</a> made by a fellow UCSD student. We decided to compare the results of our search engine to both our baseline model and TritonSearch by using the search results of over 200 queries to compute the precision@5, recall, and NDCG of all three search engines.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Our Search</th>
+      <th>Baseline</th>
+      <th>TritonSearch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Precision@5</td>
+      <td>TBD</td>
+      <td>TBD</td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>Recall</td>
+      <td>TBD</td>
+      <td>TBD</td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>NDCG</td>
+      <td>TBD</td>
+      <td>TBD</td>
+      <td>TBD</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>NOTE: We will insert some discussion here containing the interpretation of the results once we have finished evaluating the search engines.</em></p>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+&copy;  - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="http://localhost:4000/feed.xml">RSS</a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
