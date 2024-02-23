@@ -1,4 +1,4 @@
-theme: jekyll-whiteglass
+theme: minima
 title: UCSDCourseSearch
 description: A semantic search engine for UCSD courses
 
