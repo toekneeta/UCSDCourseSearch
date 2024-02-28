@@ -1,0 +1,726 @@
+﻿Query,Class Code,Ranking (position),Relevance
+2d art,VIS 1,1,1
+2d art,VIS 106A,2,1
+2d art,VIS 2,3,1
+2d art,VIS 105A,4,1
+2d art,VIS 3,5,0
+accounting,MGT 404,1,1
+accounting,MGTF 401,2,1
+accounting,MGT 4,3,1
+accounting,ECON 4,4,1
+accounting,MGT 138,5,1
+acting,TDAC 101,1,1
+acting,TDAC 1,2,1
+acting,TDGR 233,3,1
+acting,TDDR 111,4,1
+acting,TDAC 110,5,1
+advance biological topics,BISP 194,1,1
+advance biological topics,BGGN 285,2,1
+advance biological topics,BIBC 194,3,1
+advance biological topics,BGGN 280,4,1
+advance biological topics,BILD 92,5,1
+advanced machine learning methods,COGS 185,1,1
+advanced machine learning methods,MAE 146,2,1
+advanced machine learning methods,DSC 240,3,1
+advanced machine learning methods,CSE 151A,4,1
+advanced machine learning methods,DSC 250,5,1
+ai,COGS 188,1,1
+ai,CSE 259,2,1
+ai,LTCS 108,3,1
+ai,CSE 150B,4,1
+ai,CGS 108,5,1
+algae,SIO 183,1,1
+algae,SIOB 283,2,1
+algae,SIOB 282,3,1
+algae,SIO 188,4,0
+algae,SIOB 294,5,0
+algebra,MATH 200A,1,1
+algebra,MATH 200B,2,1
+algebra,MATH 200C,3,1
+algebra,MATH 103A,4,1
+algebra,MATH 100A,5,1
+algos,SIO 121GS,1,0
+algos,LTGK 2,2,0
+algos,CSE 221,3,0
+algos,NO RESULTS,4,0
+algos,NO RESULTS,5,0
+analytics,MGT 151R,1,1
+analytics,MGTA 466,2,1
+analytics,MGTA 453,3,1
+analytics,DSC 208R,4,1
+analytics,MGTA 414,5,1
+animal,COGS 142,1,1
+animal,PSYC 122,2,1
+animal,ANTH 102,3,1
+animal,COGS 143,4,1
+animal,PSYC 118,5,1
+aquarium,SIO 197BA,1,1
+aquarium,SIO 188,2,1
+aquarium,SIOB 294,3,1
+aquarium,NO RESULTS,4,0
+aquarium,NO RESULTS,5,0
+archaeology,ANTH 3,1,1
+archaeology,ANTH 288,2,1
+archaeology,ANTH 258,3,1
+archaeology,ANAR 111,4,1
+archaeology,ANAR 124,5,1
+art,VIS 110H,1,1
+art,PHIL 175,2,1
+art,VIS 120B,3,1
+art,VIS 202,4,1
+art,VIS 125BN,5,1
+artificial intelligence,COGS 188,1,1
+artificial intelligence,CSE 150B,2,1
+artificial intelligence,CSE 150A,3,1
+artificial intelligence,CSE 259,4,1
+artificial intelligence,LTCS 108,5,1
+asia,ANAR 124,1,1
+asia,LTSP 155,2,1
+asia,GPPS 400,3,1
+asia,COMM 104D,4,1
+asia,GPPA 470,5,1
+astronomy,PHYA 200,1,1
+astronomy,PHYA 299,2,1
+astronomy,PHYA 296,3,1
+astronomy,SIO 1,4,1
+astronomy,PHYS 160,5,1
+audio,MUS 5,1,1
+audio,MUS 170,2,1
+audio,AUD 278,3,1
+audio,MUS 171,4,1
+audio,MUS 270A,5,1
+autonomous vehicles,MAE 148,1,1
+autonomous vehicles,ECE 148,2,1
+autonomous vehicles,MAE 248,3,1
+autonomous vehicles,ECE 276A,4,1
+autonomous vehicles,MAE 204,5,1
+baseball,ECON 208,1,0
+baseball,PSYC 139,2,1
+baseball,SIO 188,3,0
+baseball,NO RESULTS,4,0
+baseball,NO RESULTS,5,0
+basket weaving,SE 255,1,1
+basket weaving,SE 253A,2,0
+basket weaving,LIGN 241,3,0
+basket weaving,NO RESULTS,4,0
+basket weaving,NO RESULTS,5,0
+bayes theorem,POLI 272,1,1
+bayes theorem,MATH 280A,2,1
+bayes theorem,MATH 280B,3,1
+bayes theorem,MATH 261A,4,1
+bayes theorem,MATH 264A,5,1
+biochemistry,BENG 230A,1,1
+biochemistry,BIBC 102,2,1
+biochemistry,BIBC 100,3,1
+biochemistry,CHEM 219A,4,1
+biochemistry,CHEM 219B,5,1
+bioinformatics,CHEM 280,1,1
+bioinformatics,BGGN 213,2,1
+bioinformatics,BIMM 143,3,1
+bioinformatics,BIMM 143R,4,1
+bioinformatics,BENG 126A,5,1
+biology,BIMM 134,1,1
+biology,SIO 188,2,1
+biology,SIOB 294,3,1
+biology,SIOB 290,4,1
+biology,ESYS 101,5,1
+bird,SIO 1,1,0
+bird,SIO 188,2,0
+bird,SIOB 294,3,0
+bird,NO RESULTS,4,0
+bird,NO RESULTS,5,0
+board games,POLI 204C,1,1
+board games,COGR 239,2,0
+board games,ECON 109,3,1
+board games,ECON 208,4,1
+board games,POLI 205,5,1
+botany,BIEB 126,1,1
+botany,SIO 183,2,1
+botany,SIOB 283,3,1
+botany,BGGN 227,4,1
+botany,NO RESULTS,5,0
+brain,COGS 11,1,1
+brain,COGS 107C,2,1
+brain,LIGN 181,3,1
+brain,PSYC 240,4,1
+brain,LIGN 180,5,1
+building vehicles,MAE 93,1,1
+building vehicles,USP 180,2,0
+building vehicles,MAE 148,3,1
+building vehicles,NO RESULTS,4,0
+building vehicles,NO RESULTS,5,0
+business,MGTP 414,1,1
+business,MGT 117,2,1
+business,GPIM 461,3,1
+business,MGT 417,4,1
+business,MGT 180,5,1
+chamber music,MUS 230,1,1
+chamber music,MUS 130,2,1
+chamber music,MUS 200,3,1
+chamber music,MUS 101B,4,1
+chamber music,MUS 101C,5,1
+city planning,USP 100,1,1
+city planning,USP 189,2,1
+city planning,USP 180,3,1
+city planning,USP 15,4,1
+city planning,USP 173,5,1
+code,ECE 259A,1,1
+code,LIGN 121,2,1
+code,COGS 101C,3,1
+code,ECE 255B,4,1
+code,LIGN 221,5,1
+communication ,COMM 10,1,1
+communication ,COGR 258,2,1
+communication ,BGGN 205,3,1
+communication ,COMM 115,4,1
+communication ,COGR 241,5,1
+composite,SE 142,1,1
+composite,SE 253A,2,1
+composite,SE 255,3,1
+composite,SE 251A,4,1
+composite,MATS 261A,5,1
+computer science electives,CSE 197C,1,0
+computer science electives,CSE 290,2,1
+computer science electives,CSE 599,3,0
+computer science electives,MATH 168A,4,1
+computer science electives,EDS 324DR,5,1
+computer vision ,CSE 252A,1,1
+computer vision ,CSE 252B,2,1
+computer vision ,CSE 152B,3,1
+computer vision ,CSE 152A,4,1
+computer vision ,CSE 252D,5,1
+computing,ECON 280,1,1
+computing,COGS 3,2,1
+computing,ECE 15,3,1
+computing,CSE 260,4,1
+computing,VIS 142,5,1
+conservation,ECON 144,1,1
+conservation,ENVR 105,2,1
+conservation,ANBI 132,3,1
+conservation,ANBI 114,4,1
+conservation,BIEB 176,5,1
+convolutional neural networks,COGS 181,1,1
+convolutional neural networks,CSE 151B,2,1
+convolutional neural networks,ECE 271C,3,1
+convolutional neural networks,DSC 257R,4,1
+convolutional neural networks,ECE 176,5,1
+cooking,LTCS 165,1,1
+cooking,BIBC 120,2,1
+cooking,ANSC 114,3,1
+cooking,NO RESULTS,4,0
+cooking,NO RESULTS,5,0
+covid 19,FPM 247,1,1
+covid 19,FMPH 462,2,1
+covid 19,GLBH 202,3,1
+covid 19,NO RESULTS,4,0
+covid 19,NO RESULTS,5,0
+creative writing ,LTSP 166,1,1
+creative writing ,PSYC 176,2,1
+creative writing ,PSYC 219,3,1
+creative writing ,LTWR 8B,4,1
+creative writing ,TDGE 3,5,1
+creativity,PSYC 176,1,1
+creativity,MGT 422,2,1
+creativity,TDGE 3,3,1
+creativity,LTSP 166,4,1
+creativity,DSGN 118,5,1
+credit cards,MGT 12,1,1
+credit cards,MGT 408,2,1
+credit cards,MGT 184,3,1
+credit cards,NO RESULTS,4,0
+credit cards,NO RESULTS,5,0
+cryptography,MATH 187A,1,1
+cryptography,CSE 207,2,1
+cryptography,MATH 187B,3,1
+cryptography,CSE 208,4,1
+cryptography,CSE 107,5,1
+culture,ANSC 118,1,1
+culture,ANTH 1,2,1
+culture,ANSC 120,3,1
+culture,LTCS 260,4,1
+culture,LTEU 154,5,1
+cystic fibrosis,BENG 267,1,1
+cystic fibrosis,BIOM 264,2,1
+cystic fibrosis,FMPH 462,3,1
+cystic fibrosis,NO RESULTS,4,0
+cystic fibrosis,NO RESULTS,5,0
+dance,TDTR 10,1,1
+dance,TDHD 20,2,1
+dance,TDGR 208,3,1
+dance,TDDM 1,4,1
+dance,TDDM 100,5,1
+data science capstone,DSE 260,1,1
+data science capstone,DSC 298R,2,1
+data science capstone,COGS 108,3,1
+data science capstone,NANO 281,4,0
+data science capstone,MGTF 423,5,0
+data science ethics,DSC 261,1,1
+data science ethics,PHIL 174,2,1
+data science ethics,DSC 267R,3,1
+data science ethics,DSC 260,4,1
+data science ethics,SIOG 232,5,1
+data science project,DSC 180A,1,1
+data science project,COGS 108,2,1
+data science project,DSC 180B,3,1
+data science project,COGS 9,4,1
+data science project,DSC 206,5,0
+data science theory,DSC 40A,1,1
+data science theory,MATH 216A,2,1
+data science theory,DSC 202,3,1
+data science theory,COGS 9,4,0
+data science theory,COGS 108,5,1
+data science topics,DSC 291,1,1
+data science topics,DSC 190,2,1
+data science topics,COGS 108,3,1
+data science topics,COGS 9,4,1
+data science topics,DSC 96,5,1
+data structures,CSE 100R,1,1
+data structures,CSE 100,2,1
+data structures,DSC 20,3,1
+data structures,CSE 12,4,1
+data structures,DSC 30,5,1
+data visualization,DSE 241,1,1
+data visualization,DSC 106,2,1
+data visualization,COGS 220,3,1
+data visualization,DSC 203,4,1
+data visualization,COGS 128,5,1
+database,BIMM 182,1,1
+database,BENG 182,2,1
+database,CSE 182,3,1
+database,CHEM 182,4,1
+database,CSE 232,5,1
+deep learning,CSE 151B,1,1
+deep learning,COGS 181,2,1
+deep learning,ECE 271C,3,1
+deep learning,ECE 176,4,1
+deep learning,ECE 226,5,1
+definite integrals,MATH 10B,1,1
+definite integrals,MATH 20E,2,1
+definite integrals,MATH 240B,3,1
+definite integrals,NO RESULTS,4,0
+definite integrals,NO RESULTS,5,0
+design,ECE 190,1,1
+design,ENG 100D,2,1
+design,CSE 170,3,1
+design,COGS 120,4,1
+design,DSGN 161,5,1
+digital design,ECE 25,1,1
+digital design,ECE 111,2,1
+digital design,TDDE 151,3,1
+digital design,VIS 110K,4,1
+digital design,CSE 140,5,1
+digital photography,VIS 60,1,1
+digital photography,VIS 9,2,1
+digital photography,VIS 182A,3,1
+digital photography,ANSC 183,4,1
+digital photography,CSE 273,5,1
+disability,COMM 108D,1,1
+disability,TDGE 134,2,1
+disability,COGS 172,3,1
+disability,NO RESULTS,4,0
+disability,NO RESULTS,5,0
+downsides of social media,MGT 481,1,1
+downsides of social media,POLI 100F,2,1
+downsides of social media,SOCI 122,3,1
+downsides of social media,NO RESULTS,4,0
+downsides of social media,NO RESULTS,5,0
+drawing,VIS 105A,1,1
+drawing,VIS 105B,2,1
+drawing,VIS 105C,3,1
+drawing,VIS 1,4,1
+drawing,TDGE 133,5,1
+drugs,PSYC 181,1,1
+drugs,COGS 174,2,1
+drugs,CHEM 167,3,1
+drugs,PSYC 236,4,1
+drugs,CHEM 253,5,1
+economics,ECON 113,1,1
+economics,ECON 181,2,1
+economics,ECON 132,3,1
+economics,ECON 147,4,1
+economics,ECON 266,5,1
+electrical engineering,ECE 5,1,1
+electrical engineering,ECE 289,2,1
+electrical engineering,ECE 180,3,1
+electrical engineering,ECE 188,4,1
+electrical engineering,CENG 255,5,1
+electrodynamics,PHYS 203A,1,1
+electrodynamics,ECE 107,2,1
+electrodynamics,PHYS 203B,3,1
+electrodynamics,PHYS 100A,4,1
+electrodynamics,BGGN 260,5,0
+electromagnetism,PHYS 100A,1,1
+electromagnetism,ECE 107,2,1
+electromagnetism,PHYS 100C,3,1
+electromagnetism,SIOG 231,4,1
+electromagnetism,PHYS 100B,5,1
+engineering,ECE 190,1,1
+engineering,ENG 210,2,1
+engineering,MAE 207,3,1
+engineering,ENG 15,4,1
+engineering,ENG 20,5,1
+environmental engineering,MAE 126B,1,1
+environmental engineering,MAE 126A,2,1
+environmental engineering,CHEM 171,3,1
+environmental engineering,ESYS 101,4,0
+environmental engineering,ECON 268,5,0
+ethics of social media,PHIL 160,1,1
+ethics of social media,DSC 267R,2,1
+ethics of social media,CLRE 234,3,1
+ethics of social media,PHIL 282,4,1
+ethics of social media,MGT 481,5,1
+exercise,BIPN 108,1,1
+exercise,TDMV 5,2,1
+exercise,BIPN 100,3,1
+exercise,NO RESULTS,4,0
+exercise,NO RESULTS,5,0
+exploring the ocean,SIO 30,1,1
+exploring the ocean,SIO 60,2,1
+exploring the ocean,SIOC 237B,3,1
+exploring the ocean,SIOC 237C,4,1
+exploring the ocean,SIOC 237A,5,1
+fashion,TDGR 273,1,1
+fashion,PHIL 175,2,1
+fashion,LTCO 285,3,1
+fashion,NO RESULTS,4,0
+fashion,NO RESULTS,5,0
+film,FILM 87,1,1
+film,NO RESULTS,2,0
+film,NO RESULTS,3,0
+film,NO RESULTS,4,0
+film,NO RESULTS,5,0
+finance,MGT 408,1,1
+finance,MGTF 421,2,1
+finance,MGT 180,3,1
+finance,MGT 180R,4,1
+finance,GPIM 424,5,1
+fish,SIO 188,1,1
+fish,SIOB 294,2,1
+fish,SIOB 295,3,1
+fish,NO RESULTS,4,0
+fish,NO RESULTS,5,0
+fisheries,SIO 137,1,1
+fisheries,SIOB 270A,2,1
+fisheries,SIO 188,3,1
+fisheries,SIOB 294,4,1
+fisheries,SIOB 270,5,0
+food,BIBC 120,1,1
+food,LTCS 165,2,1
+food,SOCI 137,3,1
+food,NO RESULTS,4,0
+food,NO RESULTS,5,0
+football,PSYC 139,1,1
+football,ECON 208,2,1
+football,BGGN 249A,3,0
+football,NO RESULTS,4,0
+football,NO RESULTS,5,0
+forensics,MGT 143,1,1
+forensics,MGTP 432,2,1
+forensics,SE 282,3,1
+forensics,NO RESULTS,4,0
+forensics,NO RESULTS,5,0
+forestry,SE 154,1,1
+forestry,POLI 125E,2,1
+forestry,BIEB 126,3,1
+forestry,NO RESULTS,4,0
+forestry,NO RESULTS,5,0
+fourier analysis,MATH 144,1,1
+fourier analysis,MATH 242,2,1
+fourier analysis,DSC 120,3,1
+fourier analysis,MATH 120B,4,1
+fourier analysis,MATH 220A,5,1
+game theory,ECON 109,1,1
+game theory,POLI 204C,2,1
+game theory,POLI 205,3,1
+game theory,ECON 262,4,1
+game theory,POLI 118,5,1
+genetic algorithm,COGS 186,1,1
+genetic algorithm,COGS 188,2,0
+genetic algorithm,CSE 280A,3,1
+genetic algorithm,ECE 208,4,1
+genetic algorithm,CSE 257,5,0
+genetics,BICD 100,1,1
+genetics,BICD 100R,2,1
+genetics,BIOM 252,3,1
+genetics,SOCI 138,4,1
+genetics,SOCI 138GS,5,1
+hiphop,MUS 17,1,1
+hiphop,TDMV 138,2,1
+hiphop,TDMV 149,3,1
+hiphop,TDMV 148,4,1
+hiphop,MUS 152,5,1
+history,HILD 30,1,1
+history,HIGR 206,2,1
+history,HILD 30GS,3,1
+history,HIAF 120,4,1
+history,HISC 105,5,1
+how the internet works,CSE 123,1,1
+how the internet works,COMM 164,2,1
+how the internet works,CSE 222B,3,1
+how the internet works,NO RESULTS,4,0
+how the internet works,NO RESULTS,5,0
+how to build a website,COGS 187B,1,1
+how to build a website,USP 175,2,0
+how to build a website,CSE 42,3,1
+how to build a website,NO RESULTS,4,0
+how to build a website,NO RESULTS,5,0
+how to teach kids computer science,EDS 324DR,1,1
+how to teach kids computer science,CSE 599,2,1
+how to teach kids computer science,EDS 124BR,3,1
+how to teach kids computer science,EDS 124A,4,1
+how to teach kids computer science,MAE 05,5,0
+human biology,BILD 26,1,1
+human biology,ANBI 111,2,1
+human biology,BIPN 134,3,1
+human biology,BIPN 100,4,1
+human biology,BIMM 134,5,1
+human interaction ,VIS 215,1,1
+human interaction ,CSE 276B,2,1
+human interaction ,CSE 165,3,1
+human interaction ,ANTH 247,4,1
+human interaction ,ANSC 127,5,1
+yoga,TDMV 5,1,1
+yoga,ANSC 190,2,1
+yoga,EDS 146,3,1
+yoga,NO RESULTS,4,0
+yoga,NO RESULTS,5,0
+vietnam,HIGL 114,1,1
+vietnam,ETHN 155GS,2,1
+vietnam,ETHN 140,3,1
+vietnam,LIHL 114F,4,1
+vietnam,LIHL 114W,5,1
+urban studies,SOCG 214,1,1
+urban studies,USP 105,2,1
+urban studies,SOCI 153,3,1
+urban studies,USP 30,4,1
+urban studies,USP 102,5,1
+transportation,USP 181,1,1
+transportation,USP 180,2,1
+transportation,USP 265C,3,1
+transportation,USP 165C,4,1
+transportation,NO RESULTS,5,0
+teaching,ECE 501,1,1
+teaching,SE 195,2,1
+teaching,BENG 195,3,1
+teaching,ECE 195,4,1
+teaching,LTWR 144,5,1
+supply chain,MGT 175,1,1
+supply chain,MGT 453,2,1
+supply chain,MGTA 456,3,1
+supply chain,MGT 179,4,1
+supply chain,MGT 440,5,1
+sports,HIGL 127,1,1
+sports,PSYC 139,2,1
+sports,COMM 111T,3,1
+sports,NO RESULTS,4,0
+sports,NO RESULTS,5,0
+social media,MGT 481,1,1
+social media,SOCI 122,2,1
+social media,POLI 100F,3,1
+social media,SOCG 209,4,1
+social media,LTCS 132,5,1
+semantics,LIGN 230,1,1
+semantics,LIGN 130,2,1
+semantics,LIGN 235,3,1
+semantics,LIGN 232,4,1
+semantics,PHIL 123,5,1
+science writing,AWP 101,1,1
+science writing,FMPH 406,2,1
+science writing,LTWR 122,3,1
+science writing,BGGN 293,4,1
+science writing,BGGN 205,5,1
+robotics,MAE 204,1,1
+robotics,CSE 276A,2,1
+robotics,CSE 276C,3,1
+robotics,CSE 276B,4,1
+robotics,MAE 249,5,1
+real estate,MGTF 408,1,1
+real estate,USP 120,2,1
+real estate,MGT 158,3,1
+real estate,USP 158A,4,1
+real estate,USP 5,5,1
+racism,ANTH 21,1,1
+racism,COGR 252,2,1
+racism,ETHN 103,3,1
+racism,PSYC 131,4,1
+racism,HIUS 146,5,1
+python,COGS 18,1,1
+python,CSE 6R,2,1
+python,DSC 207R,3,1
+python,BILD 62,4,1
+python,DSE 200,5,1
+plants,BIEB 126,1,1
+plants,SIO 183,2,1
+plants,SIOB 283,3,1
+plants,BGGN 227,4,1
+plants,BICD 120,5,1
+physiology,BILD 26,1,1
+physiology,BIPN 100,2,1
+physiology,BGGN 259,3,1
+physiology,SIOB 281,4,1
+physiology,BENG 230C,5,1
+photoshop,TDGR 269A,1,1
+photoshop,TDGR 269B,2,1
+photoshop,VIS 182A,3,1
+photoshop,VIS 106A,4,0
+photoshop,VIS 169B,5,0
+pharmacology,BIMM 118,1,1
+pharmacology,BGGN 218,2,1
+pharmacology,BIOM 275,3,1
+pharmacology,CHEM 118,4,1
+pharmacology,BIOM 231,5,1
+painting,VIS 106A,1,1
+painting,VIS 106C,2,1
+painting,VIS 106B,3,1
+painting,VIS 202,4,1
+painting,TDGR 269A,5,0
+organic chemistry,CHEM 40A,1,1
+organic chemistry,CHEM 143B,2,1
+organic chemistry,CHEM 259,3,1
+organic chemistry,CHEM 143C,4,1
+organic chemistry,CHEM 40C,5,1
+optimization,MATH 271A,1,1
+optimization,MATH 271B,2,1
+optimization,MATH 271C,3,1
+optimization,DSC 243,4,1
+optimization,DSC 211,5,1
+ocean,SIO 30,1,1
+ocean,SIOC 211A,2,1
+ocean,SIO 174,3,1
+ocean,SIO 3,4,1
+ocean,SIO 119,5,1
+natural language processing,DSC 258R,1,1
+natural language processing,CSE 156,2,1
+natural language processing,CSE 256,3,1
+natural language processing,LING 256,4,1
+natural language processing,LIGN 256,5,1
+neuroscience,PSYC 106,1,1
+neuroscience,PHIL 151,2,1
+neuroscience,PSYC 102,3,1
+neuroscience,COGS 107B,4,1
+neuroscience,COGS 107C,5,1
+neural networks,COGS 181,1,1
+neural networks,COGS 138,2,1
+neural networks,BIPN 162,3,1
+neural networks,BGGN 240,4,1
+neural networks,BENG 147B,5,1
+native american,ANSC 145,1,1
+native american,ETHN 214A,2,1
+native american,ETHN 112A,3,1
+native american,ETHN 112B,4,1
+native american,ETHN 114A,5,1
+national security,POLI 142I,1,1
+national security,POLI 142J,2,1
+national security,POLI 243,3,1
+national security,POLI 149,4,1
+national security,POLI 142M,5,1
+movies,RELI 150,1,1
+movies,VIS 7,2,1
+movies,VIS 194S,3,1
+movies,NO RESULTS,4,0
+movies,NO RESULTS,5,0
+modern art,VIS 124G,1,1
+modern art,LTTH 255,2,1
+modern art,VIS 22,3,1
+modern art,VIS 125BN,4,1
+modern art,VIS 128C,5,1
+middle east,HINE 120,1,1
+middle east,HINE 108,2,1
+middle east,ECON 165,3,1
+middle east,HINE 118,4,1
+middle east,HINE 165,5,1
+mental health,GLBH 171R,1,1
+mental health,ANTH 276,2,1
+mental health,ANTH 259,3,1
+mental health,ANTH 249,4,1
+mental health,GLBH 274,5,1
+marketing,MGT 407,1,1
+marketing,ECON 176,2,1
+marketing,GPIM 420,3,1
+marketing,MGT 476,4,1
+marketing,MGT 478,5,1
+marine biology,SIOB 290,1,1
+marine biology,BIEB 130,2,1
+marine biology,SIO 133,3,1
+marine biology,SIO 132,4,1
+marine biology,SIO 127,5,1
+machine learning,DSC 240,1,1
+machine learning,DSE 220,2,1
+machine learning,CSE 151A,3,1
+machine learning,COGS 118A,4,1
+machine learning,MAE 146,5,1
+lgbt,SOCI 119,1,1
+lgbt,RELI 131,2,1
+lgbt,ANSC 125GS,3,1
+lgbt,ANSC 125,4,1
+lgbt,CGS 117,5,1
+latin american history,HILA 144,1,1
+latin american history,HILA 161,2,1
+latin american history,HILA 261,3,1
+latin american history,HILA 168,4,1
+latin american history,HILA 268,5,1
+language models,LIGN 252,1,1
+language models,LIGN 165,2,1
+language models,LIGN 245,3,1
+language models,COGS 101C,4,1
+language models,CSE 256,5,1
+java,CSE 86,1,1
+java,EDS 324CR,2,1
+java,CSE 6R,3,1
+java,LIGN 121,4,0
+java,CSE 12,5,1
+introduction to calculus,MATH 10A,1,1
+introduction to calculus,MATH 20A,2,1
+introduction to calculus,MATH 10B,3,0
+introduction to calculus,MATH 20B,4,0
+introduction to calculus,MATH 20D,5,1
+image processing,CSE 166,1,1
+image processing,COGS 225,2,1
+image processing,ECE 253,3,1
+image processing,DSC 254,4,1
+image processing,CSE 252A,5,1
+zoology,SIO 133,1,1
+zoology,PSYC 118,2,1
+zoology,SIOB 295,3,1
+zoology,SIO 188,4,1
+zoology,SIOB 294,5,1
+video games,VIS 143,1,1
+video games,COGR 239,2,1
+video games,COMM 105G,3,1
+video games,NO RESULTS,4,0
+video games,NO RESULTS,5,0
+taxes,ECON 150,1,1
+taxes,MGTP 459,2,1
+taxes,ECON 230,3,1
+taxes,GPCO 406,4,1
+taxes,MGT 134,5,1
+stocks,ECON 173A,1,1
+stocks,MGT 408,2,0
+stocks,MGT 491,3,1
+stocks,NO RESULTS,4,0
+stocks,NO RESULTS,5,0
+sql,MGTA 464,1,1
+sql,DSE 201,2,1
+sql,CSE 232B,3,1
+sql,CSE 232,4,1
+sql,CSE 132C,5,1
+poisson distribution,CSE 103,1,1
+poisson distribution,MATH 180A,2,1
+poisson distribution,ECE 109,3,1
+poisson distribution,MATH 11,4,1
+poisson distribution,SE 125,5,1
+personal finance,MGT 12,1,1
+personal finance,MGT 408,2,1
+personal finance,MGT 180,3,0
+personal finance,MGTF 421,4,0
+personal finance,MGT 180R,5,0
+nlp,LIGN 245,1,0
+nlp,CSE 156,2,0
+nlp,DSC 252,3,0
+nlp,LIGN 165,4,0
+nlp,DSC 258R,5,0
+javascript,LIGN 121,1,0
+javascript,CSE 134B,2,1
+javascript,LIGN 221,3,0
+javascript,NO RESULTS,4,0
+javascript,NO RESULTS,5,0
