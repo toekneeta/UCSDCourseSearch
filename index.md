@@ -29,7 +29,7 @@ The final step involves returning and displaying the results on our website, wit
 
 ## Evaluating our Search Engine & What it Means
 
-To evaluate our search, we created another search engine using ElasticSearch. This search engine doesn't employ semantic search, but instead uses a traditional keyword search. We also found another search function called [TritonSearch](https://tritonsearch.xyz/) made by a fellow UCSD student. We decided to compare the results of our search engine to both our baseline model and TritonSearch by using the search results of over 200 queries to compute the [mean reciprocal rank (MRR)](https://www.evidentlyai.com/ranking-metrics/mean-reciprocal-rank-mrr) and [normalized discounted cummulative gain (NDCG)](https://www.evidentlyai.com/ranking-metrics/ndcg-metric) of all three search engines.
+To evaluate our search, we created another search engine using ElasticSearch. This search engine doesn't employ semantic search, but instead uses a traditional keyword search. We also found another search function called [TritonSearch](https://tritonsearch.xyz/) made by a fellow UCSD student. We decided to compare the results of our search engine to both our baseline model and TritonSearch by using the search results of 145 queries to compute the [mean reciprocal rank (MRR)](https://www.evidentlyai.com/ranking-metrics/mean-reciprocal-rank-mrr) and [normalized discounted cummulative gain (NDCG)](https://www.evidentlyai.com/ranking-metrics/ndcg-metric) of all three search engines. The 145 queries used in our evaluation are sourced from the first 145 unique queries that UCSD students used since the website's launch.
 
 | | Our Search| Baseline | TritonSearch
 | ----------- | ----------- | ----------- | -----------|
