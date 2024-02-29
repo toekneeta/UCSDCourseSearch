@@ -1,0 +1,246 @@
+Query,Class Code,Class Title,Ranking (position),Relevance
+yoga,TDMV 5,Yoga for Dance,1,1
+yoga,ANSC 190,Yoga Practices: From Banaras to Beverly Hills,2,1
+yoga,NO RESULTS,,3,0
+yoga,NO RESULTS,,4,0
+yoga,NO RESULTS,,5,0
+vietnam,HIGL 114,History of Modern Vietnam,1,1
+vietnam,ETHN 155GS,Critical Perspectives on the Vietnam War,2,1
+vietnam,ETHN 140,"Comparative Refugee Communities from Vietnam, Laos, and Cambodia",3,1
+vietnam,NO RESULTS,,4,0
+vietnam,NO RESULTS,,5,0
+urban studies,USP 131,"Culture, Tourism, and the Urban Economy: Case Studies of Craft Breweries",1,1
+urban studies,USP 30,Urban Studies and Planning Colloquium,2,1
+urban studies,NO RESULTS,,3,0
+urban studies,NO RESULTS,,4,0
+urban studies,NO RESULTS,,5,0
+transportation,USP 165C,Advanced Special Topics in Transportation,1,1
+transportation,USP 181,Public Transportation,2,1
+transportation,USP 180,Transportation Planning,3,1
+transportation,MAE 122,Flow and Transport in the Environment,4,1
+transportation,BGRD 231,Research Discussion in Nuclear Transport and Function,5,0
+teaching,CHEM 509,Teaching Methods in Chemistry and Biochemistry,1,1
+teaching,CHIN 500,Apprentice Teaching,2,1
+teaching,EDS 324DR,Teaching Methods in Computer Science,3,1
+teaching,EDS 349,Deaf Education Specialist Student Teaching Practicum,4,1
+teaching,EDS 351,Teaching the English Language Learner,5,1
+supply chain,MGT 177,Analytics and Spreadsheet Modeling in Supply Chain Management,1,1
+supply chain,MGT 175,Supply Chain Management,2,1
+supply chain,MGT 179,Topics in Supply Chain Management,3,1
+supply chain,MGTA 456,Supply Chain Analytics ,4,1
+supply chain,MGT 440,Supply Chain Cost Management Strategy,5,1
+sports,POLI 137,,1,1
+sports,HIGL 127,,2,1
+sports,HITO 167/267,,3,1
+sports,COMM 111T,,4,1
+sports,HITO 155,,5,1
+social media,LTCS 132.,,1,1
+social media,CLRE 234,,2,1
+social media,COMM 114I,,3,1
+social media,COMM 120I,,4,1
+social media,MGT 481,,5,1
+semantics,LIGN 230,,1,1
+semantics,LIGN 232,,2,1
+semantics,LIGN 235,,3,1
+semantics,LIGN 130,,4,1
+semantics,NO RESULTS,,5,0
+science writing,LTWR 122,,1,1
+science writing,AWP 101,,2,1
+science writing,LTSP 100A,,3,0
+science writing,LTSP 100B,,4,0
+science writing,NO RESULTS,,5,0
+robotics,ECE 285,,1,1
+robotics,ECE 295,,2,1
+robotics,CSE 276D,,3,1
+robotics,CSE 176A,,4,1
+robotics,CSE 276A,,5,1
+real estate,MGT 158,,1,1
+real estate,USP 151,,2,1
+real estate,USP 152B,,3,1
+real estate,USP 153,,4,1
+real estate,USP 5,,5,1
+racism,ANTH 21,,1,1
+racism,ETHN 103,,2,1
+racism,PSYC 131,,3,1
+racism,PSYC 131,,4,1
+racism,NO RESULTS,,5,0
+python,CSE 6R,,1,1
+python,COGS 18,,2,1
+python,BILD 62,,3,1
+python,DSC 207R,,4,1
+python,NO RESULTS,,5,0
+plants,BICD 123,,1,1
+plants,BGJC 208,,2,1
+plants,BICD 120,,3,1
+plants,BIEB 126,,4,1
+plants,BGRD 205,,5,1
+physiology,BIPN 102,,1,1
+physiology,BIOM 276,,2,1
+physiology,BENG 140A,,3,1
+physiology,BENG 140B,,4,1
+physiology,AUD 255,,5,1
+photoshop,TDGR 269A,,1,1
+photoshop,TDGR 269B,,2,1
+photoshop,NO RESULTS,,3,0
+photoshop,NO RESULTS,,4,0
+photoshop,NO RESULTS,,5,0
+pharmacology,BIMM 118,,1,1
+pharmacology,BGGN 218.,,2,1
+pharmacology,BIOM 294,,3,1
+pharmacology,PSYC 186GS,,4,1
+pharmacology,BIOM 231,,5,1
+painting,VIS 127D,,1,1
+painting,VIS 127E,,2,1
+painting,VIS 106C,,3,1
+painting,VIS 127Q,,4,1
+painting,VIS 106A,,5,1
+organic chemistry,CHEM 294,,1,1
+organic chemistry,CHEM 41C,,2,1
+organic chemistry,CHEM 41B,,3,1
+organic chemistry,CHEM 259,,4,1
+organic chemistry,CHEM 43A,,5,1
+optimization,CSE 257,,1,1
+optimization,MATH 278C,,2,1
+optimization,CSE 203B,,3,1
+optimization,ECE 273,,4,1
+optimization,MATH 173B,,5,1
+ocean,SIO 3,,1,1
+ocean,SIO 30,,2,1
+ocean,SIO 60,,3,1
+ocean,SIOC 235,,4,1
+ocean,SIOG 253,,5,1
+natural language processing,DSC 252,,1,1
+natural language processing,CSE 156,,2,1
+natural language processing,CSE 256/LING 256,,3,1
+natural language processing,DSC 258R,,4,1
+natural language processing,LIGN 256,,5,1
+neuroscience,NEUG 240,,1,1
+neuroscience,ANBI 112,,2,1
+neuroscience,BGGN 201,,3,1
+neuroscience,NEU 200A-B-C,,4,1
+neuroscience,NEUG 221,,5,1
+neural networks,CSE 251B,,1,1
+neural networks,COGS 181,,2,1
+neural networks,NO RESULTS,,3,0
+neural networks,NO RESULTS,,4,0
+neural networks,NO RESULTS,,5,0
+native american,ETHN 112A,,1,1
+native american,ETHN 112B,,2,1
+native american,ETHN 111,,3,1
+native american,HIUS 108B,,4,1
+native american,ETHN 112C,,5,1
+national security,GPPS 443,,1,1
+national security,POLI 142J,,2,1
+national security,POLI 142I,,3,1
+national security,GPPS 407,,4,1
+national security,POLI 149,,5,1
+movies,HIUS 122,,1,1
+movies,VIS 7,,2,1
+movies,SOCI 150,,3,1
+movies,NO RESULTS,,4,0
+movies,NO RESULTS,,5,0
+modern art,VIS 125C,,1,1
+modern art,VIS 125C,,2,1
+modern art,VIS 22,,3,1
+modern art,VIS 126P,,4,1
+modern art,VIS 126Q,,5,1
+middle east,ANSC 133,,1,1
+middle east,HINE 108,,2,1
+middle east,HINE 128,,3,1
+middle east,HINE 118,,4,1
+middle east,HINE 165/265,,5,1
+mental health,ANSC 143,,1,1
+mental health,GLBH 143,,2,1
+mental health,GLBH 274,,3,1
+mental health,FMPH 425,,4,1
+mental health,FMPH 426,,5,1
+marketing,GPIM 420,,1,1
+marketing,MGT 476,,2,1
+marketing,MGT 103,,3,1
+marketing,ECON 176,,4,1
+marketing,MGT 407,,5,1
+marine biology,SIO 132,,1,1
+marine biology,SIOB 262,,2,1
+marine biology,SIO 133,,3,1
+marine biology,SIO 139,,4,1
+marine biology,SIO 187,,5,1
+machine learning,ECE 175A,,1,1
+machine learning,POLI 175,,2,1
+machine learning,DSC 251,,3,1
+machine learning,CSE 251C,,4,1
+machine learning,ECE 286,,5,1
+lgbt,POLI 135,,1,1
+lgbt,NO RESULTS,,2,0
+lgbt,NO RESULTS,,3,0
+lgbt,NO RESULTS,,4,0
+lgbt,NO RESULTS,,5,0
+latin american history,HILA 199.,,1,1
+latin american history,HILA 167/267,,2,1
+latin american history,HILA 168/268,,3,1
+latin american history,HILA 144,,4,1
+latin american history,HILA 162/262,,5,1
+language models,LIGN 252,,1,1
+language models,NO RESULTS,,2,0
+language models,NO RESULTS,,3,0
+language models,NO RESULTS,,4,0
+language models,NO RESULTS,,5,0
+java,CSE 86,,1,1
+java,EDS 324CR,,2,1
+java,NO RESULTS,,3,0
+java,NO RESULTS,,4,0
+java,NO RESULTS,,5,0
+introduction to calculus,CSE 237A,,1,0
+introduction to calculus,NO RESULTS,,2,0
+introduction to calculus,NO RESULTS,,3,0
+introduction to calculus,NO RESULTS,,4,0
+introduction to calculus,NO RESULTS,,5,0
+image processing,ECE 285,,1,1
+image processing,ECE 295,,2,1
+image processing,ECE 253,,3,1
+image processing,CSE 166,,4,1
+image processing,NO RESULTS,,5,1
+zoology,NO RESULTS,,1,0
+zoology,NO RESULTS,,2,0
+zoology,NO RESULTS,,3,0
+zoology,NO RESULTS,,4,0
+zoology,NO RESULTS,,5,0
+video games,NO RESULTS,,1,0
+video games,NO RESULTS,,2,0
+video games,NO RESULTS,,3,0
+video games,NO RESULTS,,4,0
+video games,NO RESULTS,,5,0
+taxes,NO RESULTS,,1,0
+taxes,NO RESULTS,,2,0
+taxes,NO RESULTS,,3,0
+taxes,NO RESULTS,,4,0
+taxes,NO RESULTS,,5,0
+stocks,NO RESULTS,,1,0
+stocks,NO RESULTS,,2,0
+stocks,NO RESULTS,,3,0
+stocks,NO RESULTS,,4,0
+stocks,NO RESULTS,,5,0
+sql,NO RESULTS,,1,0
+sql,NO RESULTS,,2,0
+sql,NO RESULTS,,3,0
+sql,NO RESULTS,,4,0
+sql,NO RESULTS,,5,0
+poisson distribution,NO RESULTS,,1,0
+poisson distribution,NO RESULTS,,2,0
+poisson distribution,NO RESULTS,,3,0
+poisson distribution,NO RESULTS,,4,0
+poisson distribution,NO RESULTS,,5,0
+personal finance,NO RESULTS,,1,0
+personal finance,NO RESULTS,,2,0
+personal finance,NO RESULTS,,3,0
+personal finance,NO RESULTS,,4,0
+personal finance,NO RESULTS,,5,0
+nlp,NO RESULTS,,1,0
+nlp,NO RESULTS,,2,0
+nlp,NO RESULTS,,3,0
+nlp,NO RESULTS,,4,0
+nlp,NO RESULTS,,5,0
+javascript,NO RESULTS,,1,0
+javascript,NO RESULTS,,2,0
+javascript,NO RESULTS,,3,0
+javascript,NO RESULTS,,4,0
+javascript,NO RESULTS,,5,0

@@ -44,7 +44,6 @@ password = 'ucsd-course-search9'
 driver= '{ODBC Driver 18 for SQL Server}'
 
 @bp.route('/log-feedback', methods=['POST'])
-# @profile_route  # Apply the profiling decorator here
 def log_feedback():
     data = request.json
     # Update the connection string as per your Azure SQL Database details
@@ -64,7 +63,6 @@ def log_feedback():
         return jsonify({'status': 'error', 'message': 'Failed to log feedback'}), 500
     
 @bp.route('/log-survey', methods=['POST'])
-# @profile_route  # Apply the profiling decorator here
 def log_survey():
     data = request.json
     # Update the connection string as per your Azure SQL Database details

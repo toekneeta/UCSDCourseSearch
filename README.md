@@ -39,14 +39,25 @@ Execute the following commands to build and publish the Docker image: (replace n
 
 2. **Build the Docker Image:**
    ```sh
+   docker build -t <your-docker-image-name> .
+   
+   # example
    docker build -t ucsdcoursesearch-docker .
    ```
+
 3. **Tag the Docker Image:**
    ```sh
+   docker tag <your-docker-image-name>:<your-dockerhub-username>/<your-repository-name>:<target-tag>
+   
+   # example
    docker tag ucsdcoursesearch-docker:latest mfrankne/ucsdcoursesearch:latest
    ```
+
 4. **Push the Docker Image to a Registry:**
    ```sh
+   docker push <your-dockerhub-username>/<your-repository-name>:<target-tag>
+
+   # example
    docker push mfrankne/ucsdcoursesearch:latest
    ```
 5. **Login to Azure:**
@@ -55,18 +66,14 @@ Execute the following commands to build and publish the Docker image: (replace n
    ```
    Follow the prompts for credentials.
 
-#### Setting up Azure Container Registry (ACR)
-Create an Azure Container Registry to store your Docker images:
-
-```sh
-az acr create --name ucsdcoursesearch --resource-group ucs-resource-group --sku standard --admin-enabled true
-```
-
 #### Deploying the Web Application
-To deploy the web application on Azure with a Docker image, use the following command:
+To deploy the web application on Azure with a (public) Docker image, use the following command:
 
 ```sh
-az container create --resource-group ucs-resource-group --name min-ucs-app-instance --image mfrankne/ucsdcoursesearch:latest --cpu 2 --memory 3 --dns-name-label ucsd-course-search --ports 8000
+az container create --resource-group <your-resource-group-name> --name  <your-container-instance-name> --image your-dockerhub-username>/<your-repository-name>:<target-tag> --cpu 4 --memory 4 --dns-name-label <website-url-tag> --ports <port-number>
+
+# example
+az container create --resource-group ucs-resource-group --name min-ucs-app-instance --image mfrankne/ucsdcoursesearch:latest --cpu 4 --memory 4 --dns-name-label ucsd-course-search --ports 8000
 ```
 
 The website will be accessible at `http://ucsd-course-search.eastus.azurecontainer.io:8000/`.
@@ -74,13 +81,22 @@ The website will be accessible at `http://ucsd-course-search.eastus.azurecontain
 ### Useful Commands for Logs and Debugging
 - **To Check the Container State:**
   ```sh
+  az container show --resource-<your-resource-group-name> --name <your-container-instance-name> --query containers[0].instanceView.currentState.state
+
+  # example
   az container show --resource-group ucs-resource-group --name min-ucs-app-instance --query containers[0].instanceView.currentState.state
   ```
 - **To View Container Events:**
   ```sh
+  az container show --resource-<your-resource-group-name> --name <your-container-instance-name> --query instanceView.events
+
+  # example
   az container show --resource-group ucs-resource-group --name min-ucs-app-instance --query instanceView.events
   ```
 - **To Access Container Logs:**
   ```sh
+  az container logs --resource-<your-resource-group-name> --name <your-container-instance-name>
+
+  # example
   az container logs --resource-group ucs-resource-group --name min-ucs-app-instance
   ```

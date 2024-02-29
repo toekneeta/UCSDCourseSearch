@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import heapq
 import spacy
+import re
 
 # loading spacy
 nlp = spacy.load('en_core_web_sm')
@@ -64,7 +65,7 @@ def cosine_similarity(vec1, vec2):
     """
     return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 
-def search(query, data, k):
+def search(query, data, k=10):
     """
     Computes the embedding of the query and retrieves the k most similar documents
     """
@@ -72,11 +73,25 @@ def search(query, data, k):
     title_embeddings = data['Title Embeddings']
     desc_embeddings = data['Description Embeddings']
 
+    # if query is a potential course code, check if its in a valid course code format
+    if re.match('^[A-Za-z]+\d+$', query):
+        # remove punctuation from query
+        query = re.sub('[^0-9a-zA-Z ]+', '', query)
+        # add the space if query doesn't have a space between department and number
+        query = re.sub("[A-Za-z]+", lambda ele: " " + ele[0] + " ", query).strip()
+        
     # if the query is a course code, return just the row containing the course code
-    if query.upper() in data['Code'].values:
+    if re.sub('[^0-9a-zA-Z ]+', '', query).upper() in data['Code'].values:  
+        query = re.sub('[^0-9a-zA-Z ]+', '', query)
         exact_code = data[data['Code'] == query.upper()].iloc[0]
-        return [(exact_code['Code'], exact_code['Title'], exact_code['Description'], exact_code['Prerequisites'], exact_code['URL'], exact_code['Spring'])] 
-
+        return [(exact_code['Code'], exact_code['Title'], exact_code['Description'], exact_code['Prerequisites'], exact_code['URL'], exact_code['Spring'])]
+    
+    # if the query is a course department, return all courses from that department
+    if re.sub('[^0-9a-zA-Z ]+', '', query).upper() in data['Department'].values:
+        query = re.sub('[^0-9a-zA-Z ]+', '', query)
+        exact_dept = data[data['Department'] == query.upper()]
+        return [(exact_code['Code'], exact_code['Title'], exact_code['Description'], exact_code['Prerequisites'], exact_code['URL'], exact_code['Spring']) for i in range(exact_dept.shape[0])]
+    
     # gets the embedding of the query
     query_embedding = preprocess_and_embed(query)
     
@@ -93,7 +108,6 @@ def search(query, data, k):
     
     # ranks similarities by most similar to query embedding
     index_similarity_pair_ranked =  heapq.nlargest(k, enumerate(similarities), key=lambda x: x[1])
-    print(len(index_similarity_pair_ranked))
     
     ranked_docs = []
     for ind, sim in index_similarity_pair_ranked:
