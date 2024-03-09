@@ -29,11 +29,12 @@ The final step involves returning and displaying the results on our website, wit
 
 ## Evaluating our Search Engine & What it Means
 
-To evaluate our search, we created another search engine using ElasticSearch. This search engine doesn't employ semantic search, but instead uses a traditional keyword search. We also found another search function called [TritonSearch](https://tritonsearch.xyz/) made by a fellow UCSD student. We decided to compare the results of our search engine to both our baseline model and TritonSearch by using the search results of 145 queries to compute the [mean reciprocal rank (MRR)](https://www.evidentlyai.com/ranking-metrics/mean-reciprocal-rank-mrr) and [normalized discounted cummulative gain (NDCG)](https://www.evidentlyai.com/ranking-metrics/ndcg-metric) of all three search engines. The 145 queries used in our evaluation are sourced from the first 145 unique queries that UCSD students used since the website's launch.
+To evaluate our search, we created another search engine using ElasticSearch. This search engine doesn't employ semantic search, but instead uses a traditional keyword search. We also found another search function called [TritonSearch](https://tritonsearch.xyz/) made by a fellow UCSD student. We decided to compare the results of our search engine to both our baseline model and TritonSearch by using the search results of 145 queries to compute the [mean reciprocal rank (MRR)](https://www.evidentlyai.com/ranking-metrics/mean-reciprocal-rank-mrr), [normalized discounted cummulative gain (NDCG)](https://www.evidentlyai.com/ranking-metrics/ndcg-metric), and zero result rate (ZRR), which is the proportion of searches that yielded zero results, of all three search engines. The 145 queries used in our evaluation are sourced from the first 145 unique queries that UCSD students used since the website's launch.
 
 | | Our Search| Baseline | TritonSearch
 | ----------- | ----------- | ----------- | -----------|
-| Mean Reciprocal Rank | TBD | TBD | TBD
-| NDCG| TBD | TBD | TBD
+| MRR | 0.9690 | 0.9345 | 0.7241
+| NDCG| 0.9684 | 0.9404 | 0.7265
+| ZRR | 0.0207 | 0.0219 | 0.2690
 
-*NOTE: We will insert some discussion here containing the interpretation of the results once we have finished evaluating the search engines.*
+Our semantic search engine produced the best results in all three of the measured evaluation metrics when compared to the other search engines. The high MRR and NDCG scores show that our search engine generally ranked the most relevant results at the top of the list, while the low ZRR shows that our search engine showed relevant results for the majority of the queries in our test set. Overall, this shows that our search tool is capable of producing highly relevant results and is proficient at matching the correct courses to user queries.
