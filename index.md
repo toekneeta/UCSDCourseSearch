@@ -4,7 +4,7 @@ title: UCSDCourseSearch
 ---
 
 # Welcome to UCSDCourseSearch!
-**Created by**: Misa Franknedy and Tony Ta
+*Created by Misa Franknedy and Tony Ta*
 
 - [UCSDCourseSearch Website](http://ucsd-course-search.westus2.azurecontainer.io:8000/)
 - [GitHub Repository](https://github.com/toekneeta/UCSDCourseSearch/tree/main)
