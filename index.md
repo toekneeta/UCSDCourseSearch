@@ -9,7 +9,7 @@ title: UCSDCourseSearch
 - [UCSDCourseSearch Website](http://ucsd-course-search.westus2.azurecontainer.io:8000/)
 - [GitHub Repository](https://github.com/toekneeta/UCSDCourseSearch/tree/main)
 - [Report](https://drive.google.com/file/d/16Lpo-LVNT5qIltTENZE-W6WIUBD6ONvk/view?usp=sharing)
-- [Poster](https://drive.google.com/file/d/1-Zt_e3IzYvBw3QLgD0F0rvuvow68wsTe/view?usp=sharing)
+- [Poster](https://drive.google.com/file/d/1uC2omL48IlYUYQiCwH9wFqNnEegVRsJ_/view?usp=sharing)
 
 ## Introduction
 
